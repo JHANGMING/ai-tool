@@ -1,0 +1,402 @@
+// *{
+//   outline: 1px solid red;
+// }
+.container {
+  max-width: 1296px;
+  padding: 0px 0px 32px 0px;
+  margin: 0 auto;
+
+  @include pc {
+    max-width: 1340px;
+  }
+
+  @include pad {
+    max-width: 80%;
+    padding: 100px 0;
+  }
+
+  @include mobile {
+    max-width: 75%;
+    padding: 70px 0;
+  }
+}
+
+.big-white {
+  max-width: 1920px;
+  background: $color-5rd;
+  border-radius: 160px;
+  padding: 160px 0;
+
+  @include pad {
+    border-radius: 100px;
+    padding: 40px 0;
+  }
+
+  @include mobile {
+    border-radius: 80px;
+  }
+}
+
+.tools {
+  &-h2 {
+    margin-bottom: 80px;
+
+    @include pad {
+      font-size: 50px;
+      margin-bottom: 50px;
+    }
+
+    @include mobile {
+      font-size: 35px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &-input-icon {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+
+    .icon {
+      position: absolute;
+      left: 43px;
+      top: 27px;
+      color: $color-4rd;
+    }
+
+    .search {
+      width: 100%;
+      border: 1px solid $color-3rd;
+      background: $color-3rd;
+      color: $color-4rd;
+      border-radius: 16px;
+      padding: 20px 76px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &-search {
+    margin-bottom: 40px;
+
+    @include pad {
+      flex-direction: column;
+      position: relative;
+    }
+
+    @include mobile {
+      margin-bottom: 12px;
+    }
+
+    &-icon-filter,
+    &-icon-arrowdown {
+      position: relative;
+      display: inline-block;
+
+      .icon-filter {
+        position: absolute;
+        left: 87px;
+        top: calc(50%);
+      }
+
+      .icon-arrowdown {
+        position: absolute;
+        left: 120px;
+        top: calc(50%);
+      }
+    }
+
+    &-icon-filter {
+      @include pad {
+        margin-bottom: 24px;
+      }
+
+      @include mobile {
+        margin-bottom: 12px;
+      }
+    }
+
+    &-icon-arrowdown {
+      @include pad {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+      }
+    }
+
+    &-list {
+      padding: 8px 16px;
+      overflow-x: auto;//新增滾動軸
+      @include pad {
+        width: 90%;
+      }
+
+      @include mobile {
+        width: 100%;
+      }
+
+      li {
+        padding: 8px 16px;
+        display: flex;
+        align-items: center;
+
+        @include pad {
+          white-space: nowrap; //文字不換行
+        }
+
+        a {
+          color: $color-4rd;
+
+          &:hover {
+            color: $color-1st;
+            font-weight: 700;
+          }
+        }
+      }
+
+      .all-block {
+        background: $color-3rd;
+        border-radius: 16px;
+
+        a {
+          color: $color-1st;
+        }
+      }
+    }
+  }
+}
+
+.list {
+  flex-wrap: wrap;
+
+  @include pad {
+    justify-content: space-evenly;
+  }
+}
+
+.card {
+  max-width: 416px;
+  border: 1px solid $color-3rd;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  flex-direction: column;
+
+  @include pc {
+    width: 33%;
+  }
+
+  @include pad {
+    width: 40%;
+    margin-bottom: 12px;
+  }
+
+  @include mobile {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  .img {
+    border-radius: 16px 16px 0 0;
+    overflow: hidden;
+
+    img:hover {
+      transform: scale(1.2); //圖片放大效果
+      transition: 0.5s; //圖片放大秒數
+    }
+  }
+
+  .list-title {
+    flex-grow: 1; //防止文字段落不一樣跑行
+
+    .title {
+      margin-top: 20px;
+      padding: 0 32px;
+    }
+
+    .content-p {
+      margin-top: 12px;
+      margin-bottom: 24px;
+      padding: 0 32px;
+    }
+  }
+
+  .list-ai,
+  .list-text {
+    padding: 20px 32px;
+    border-top: 1px solid $color-3rd;
+  }
+}
+
+.pagination {
+  justify-content: flex-end;
+
+  @include mobile {
+    justify-content: center;
+  }
+
+  li {
+    padding: 14px 20px;
+    margin-right: 4px;
+
+    a {
+      color: $color-1st;
+
+      &:hover {
+        color: $color-4rd;
+      }
+    }
+  }
+
+  .one-black {
+    background: $color-1st;
+    border-radius: 16px;
+
+    a {
+      color: $color-5rd;
+    }
+  }
+}
+
+.callToAction {
+  align-items: center;
+  padding: 80px 0px;
+  border-bottom: 2px solid $color-4rd;
+
+  @include pad {
+    padding: 60px 100px;
+  }
+
+  @include mobile {
+    padding: 60px 80px;
+  }
+
+  &-h2 {
+    color: $color-5rd;
+    margin-bottom: 48px;
+
+    @include pad {
+      font-size: 40px;
+    }
+
+    @include mobile {
+      font-size: 30px;
+    }
+  }
+
+  &-start {
+    border: 1px solid $color-5rd;
+    border-radius: 10px;
+    padding: 20px 35px;
+    position: relative;
+
+    &:hover {
+      background: $color-5rd;
+      color: $color-6rd;
+    }
+
+    p {
+      margin-right: 16px;
+    }
+
+    .arrow {
+      position: absolute;
+      right: 24px;
+      top: calc(50%);
+    }
+  }
+}
+
+.sitemap {
+  padding: 80px 0;
+  border-bottom: 2px solid $color-4rd;
+
+  @include mobile {
+    flex-direction: column-reverse;
+    padding: 60px 0;
+  }
+
+  &-list {
+    color: $color-5rd;
+
+    @include pad {
+      font-size: 60px;
+    }
+
+    @include mobile {
+      font-size: 40px;
+    }
+  }
+
+  &-log {
+    text-align: end;
+
+    img {
+      max-width: 50%
+    }
+
+    @include mobile {
+      text-align: start;
+      margin-bottom: 32px;
+
+      img {
+        max-width: 40%
+      }
+    }
+  }
+}
+
+.footer {
+  margin-top: 40px;
+
+  @include mobile {
+    flex-direction: column;
+    position: relative;
+  }
+
+  &-copyright {
+    color: $color-5rd;
+    flex-grow: 1;
+
+    @include mobile {
+      margin-bottom: 24px;
+    }
+  }
+
+  &-social {
+    flex-grow: 4;
+
+    li {
+      padding: 0 20px 0 0;
+
+      a:hover {
+        color: $color-4rd;
+      }
+    }
+
+  }
+
+  &-top {
+    color: $color-5rd;
+    flex-grow: 0;
+    position: relative;
+
+    &:hover {
+      color: $color-4rd;
+    }
+
+    p {
+      margin-right: 15px;
+    }
+
+    .arrow-up {
+      position: absolute;
+      right: 0px;
+      top: calc(50%);
+    }
+
+    @include mobile {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+  }
+}

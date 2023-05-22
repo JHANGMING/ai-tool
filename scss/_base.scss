@@ -1,0 +1,87 @@
+//全站設定
+a {
+  text-decoration: none;
+  color: $color-5rd;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family-base;
+  line-height: 1.5;
+  color: $color-1st;
+  font-weight: 400;
+  font-size: 16px;
+  background: $color-6rd;
+}
+.fw-400 {
+  font-weight: 400;
+}
+.fw-700 {
+  font-weight: 700;
+}
+.fw-900 {
+  font-weight: 900;
+}
+
+.fz-16{
+  font-size: 16px;
+}
+.fz-20 {
+  font-size: 20px;
+}
+.fz-48 {
+  font-size: 48px;
+}
+.fz-80{
+  font-size: 80px;
+}
+.mr-24{
+  margin-right: 24px;
+}
+.font-tac{
+  text-align: center;
+}
+.content-p-font {
+  font-size: 14px;
+  color: $color-2nd;
+}
+
+.title-font-900 {
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.icon-color-fz-18 {
+  color: $color-1st;
+  font-size: 18px;
+}
+.icon-font{
+  background: $color-5rd;
+  border: 1px solid $color-3rd;
+  border-radius: 16px;
+  padding: 20px 60px 20px 40px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.d-flex{
+  display: flex;
+}
+.d-flex-jfsp {
+  display: flex;
+  justify-content: space-between;
+}
+
+.d-column {
+  display: flex;
+  flex-direction: column;
+}
