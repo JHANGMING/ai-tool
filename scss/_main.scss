@@ -92,10 +92,16 @@
   &-title {
     @include mobile {
       flex-direction: column;
+      padding-left: 40px;
+      // align-items: center;
     }
 
     &-h2 {
       max-width: 414px;
+
+      @include pad {
+        width: 30%;
+      }
 
       @include mobile {
         font-size: 20px;
@@ -108,10 +114,12 @@
 
       @include pad {
         font-size: 40px;
+        width: 60%;
       }
 
       @include mobile {
         font-size: 32px;
+        width: 90%;
       }
     }
   }

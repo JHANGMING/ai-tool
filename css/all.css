@@ -478,10 +478,16 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding-left: 40px;
   }
 }
 .service-title-h2 {
   max-width: 414px;
+}
+@media (max-width: 992px) {
+  .service-title-h2 {
+    width: 30%;
+  }
 }
 @media (max-width: 768px) {
   .service-title-h2 {
@@ -495,11 +501,13 @@ body {
 @media (max-width: 992px) {
   .service-title-h3 {
     font-size: 40px;
+    width: 60%;
   }
 }
 @media (max-width: 768px) {
   .service-title-h3 {
     font-size: 32px;
+    width: 90%;
   }
 }
 .service-list {
