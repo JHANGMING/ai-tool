@@ -384,6 +384,41 @@ body {
   margin-right: 16px;
 }
 
+@-webkit-keyframes decomove {
+  0% {
+    top: 0px;
+  }
+  30% {
+    top: -300px;
+  }
+  40% {
+    left: 600px;
+  }
+  50% {
+    top: 400px;
+  }
+  80% {
+    top: 0px;
+  }
+}
+
+@keyframes decomove {
+  0% {
+    top: 0px;
+  }
+  30% {
+    top: -300px;
+  }
+  40% {
+    left: 600px;
+  }
+  50% {
+    top: 400px;
+  }
+  80% {
+    top: 0px;
+  }
+}
 .container {
   max-width: 1296px;
   margin: 0 auto;
@@ -462,6 +497,30 @@ body {
 }
 .banner-animation {
   text-align: end;
+  overflow: hidden;
+}
+.banner-animation .deco-img-1,
+.banner-animation .deco-img-2,
+.banner-animation .deco-img-3 {
+  position: relative;
+}
+.banner-animation .deco-img-1 {
+  -webkit-animation: 5s ease-in-out infinite 3.5s;
+          animation: 5s ease-in-out infinite 3.5s;
+  -webkit-animation-name: decomove;
+          animation-name: decomove;
+}
+.banner-animation .deco-img-2 {
+  -webkit-animation: 5s ease-in-out infinite 2.5s;
+          animation: 5s ease-in-out infinite 2.5s;
+  -webkit-animation-name: decomove;
+          animation-name: decomove;
+}
+.banner-animation .deco-img-3 {
+  -webkit-animation: 5s ease-in-out infinite 1.5s;
+          animation: 5s ease-in-out infinite 1.5s;
+  -webkit-animation-name: decomove;
+          animation-name: decomove;
 }
 @media (max-width: 768px) {
   .banner-animation {

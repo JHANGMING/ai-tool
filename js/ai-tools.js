@@ -9,14 +9,14 @@ function initSwiper() {
     /* 斷點設定 */
     breakpoints: {
       /* 螢幕寬度大於等於 992px 時切換為 3 欄 */
-      994: {
+      992: {
         slidesPerView: 3
       },
       /* 螢幕寬度大於等於 768px 時切換為 2 欄 */
-      769: {
+      768: {
         slidesPerView: 2
       },
-      /* 更小時都顯示 1 欄 */
+      /* 更小都顯示 1 欄 */
       0: {
         slidesPerView: 1
       }
@@ -32,5 +32,5 @@ function initSwiper() {
   });
 }
 
-/* 觸發自己定義的函式 */
+
 initSwiper();
