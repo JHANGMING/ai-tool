@@ -1,9 +1,5 @@
-// *{
-//   outline: 1px solid red;
-// }
 .container {
   max-width: 1296px;
-  padding: 0px 0px 32px 0px;
   margin: 0 auto;
 
   @include pc {
@@ -12,20 +8,239 @@
 
   @include pad {
     max-width: 80%;
-    padding: 100px 0;
+    padding: 50px 0;
   }
 
   @include mobile {
     max-width: 75%;
-    padding: 70px 0;
+    padding: 30px 0;
   }
 }
+
+.header {
+  border-bottom: 2px solid $color-5rd;
+
+  &-logo {
+    width: 189px;
+    height: 40px;
+  }
+
+  &-meau {
+    align-items: center;
+
+    @include pad {
+      display: none;
+    }
+  }
+  
+  //漢堡按鈕
+  &-btn {  
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    color: #ffffff;
+    display: none;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    /* 在電腦版時不顯示 */
+    @include pad {
+      display: block;
+    }
+  }
+}
+
+.banner {
+  &-h2 {
+    @include pad {
+      font-size: 80px;
+    }
+
+    @include mobile {
+      font-size: 48px;
+    }
+  }
+  
+  //開始按鈕
+  &-start {
+    display: block;
+    max-width: 160px;
+    text-align: center;
+
+    &:hover {
+      background: $color-5rd;
+      color: $color-6rd;
+    }
+  }
+
+  &-animation {
+    text-align: end;
+
+    @include mobile {
+      text-align: center;
+
+      img {
+        width: 30%;
+      }
+    }
+  }
+}
+
+.service {
+  &-title {
+    @include mobile {
+      flex-direction: column;
+    }
+
+    &-h2 {
+      max-width: 414px;
+
+      @include mobile {
+        font-size: 20px;
+        margin-bottom: 24px;
+      }
+    }
+
+    &-h3 {
+      max-width: 856px;
+
+      @include pad {
+        font-size: 40px;
+      }
+
+      @include mobile {
+        font-size: 32px;
+      }
+    }
+  }
+
+  &-list {
+    flex-wrap: wrap;
+
+    @include pad {
+      padding: 20px 20px;
+      width: 100%;
+    }
+
+    @include mobile {
+      width: 100%;
+      margin-top: 40px;
+      padding: 20px 20px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    li {
+      flex: 1;
+      border: 1px solid $color-2nd;
+      max-width: 416px;
+
+      @include pad {
+        margin-right: 12px;
+        padding: 40px 20px;
+        width: 100%;
+      }
+
+      @include mobile {
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+
+.partner {
+  
+  &-title {
+    @include pad {
+      margin-top: 100px;
+    }
+
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+  &-list{
+    overflow: hidden;
+    position: relative;
+    & ::before {
+        content: "";
+        width: 196px;
+        height: 40px;
+        background-image: $background-linear;
+        position: absolute;
+        left: 0;
+      }
+    
+    & ::after {
+      content: "";
+      width: 196px;
+      height: 40px;
+      background-image: $background-linear;
+      transform: rotate(-180deg);
+      position: absolute;
+      right: 0px;
+    }
+  }
+  &-list-1 {
+    width: 1296px;
+  }
+  &-list-2 {
+    width: 1296px;
+    padding-left: 100px;
+  }
+}
+
+.swiper {
+
+  &-wrapper {
+    max-width: 1296px;
+    @include mobile {
+      margin-top: 48px;
+    }
+
+    li {
+      width: 416px;
+      background: rgba(255, 255, 255, 0.08);
+      display: flex;
+      flex-direction: column;
+      height: initial;
+
+      p {
+        flex-grow: 1;
+        padding-bottom: 48px;
+
+        @include mobile {
+          margin-bottom: 10px;
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  &-pagination {
+    position: absolute;
+    width: 100px;
+    height: 20px;
+  }
+
+  &-pagination .swiper-pagination-bullet {
+    /* 設定單個分頁按鈕的顏色 */
+    background: $color-2nd;
+    opacity: 1;
+  }
+
+  &-pagination .swiper-pagination-bullet-active {
+    /* 設定當前選中分頁按鈕的顏色 */
+    background: $color-5rd;
+  }
+}
+
 
 .big-white {
   max-width: 1920px;
   background: $color-5rd;
-  border-radius: 160px;
-  padding: 160px 0;
 
   @include pad {
     border-radius: 100px;
@@ -39,7 +254,6 @@
 
 .tools {
   &-h2 {
-    margin-bottom: 80px;
 
     @include pad {
       font-size: 50px;
@@ -69,14 +283,10 @@
       border: 1px solid $color-3rd;
       background: $color-3rd;
       color: $color-4rd;
-      border-radius: 16px;
-      padding: 20px 76px;
-      margin-bottom: 24px;
     }
   }
 
   &-search {
-    margin-bottom: 40px;
 
     @include pad {
       flex-direction: column;
@@ -125,7 +335,8 @@
 
     &-list {
       padding: 8px 16px;
-      overflow-x: auto;//新增滾動軸
+      overflow-x: auto; //新增滾動軸
+
       @include pad {
         width: 90%;
       }
@@ -153,10 +364,8 @@
         }
       }
 
-      .all-block {
+      .one-black {
         background: $color-3rd;
-        border-radius: 16px;
-
         a {
           color: $color-1st;
         }
@@ -176,8 +385,6 @@
 .card {
   max-width: 416px;
   border: 1px solid $color-3rd;
-  border-radius: 16px;
-  margin-bottom: 24px;
   flex-direction: column;
 
   @include pc {
@@ -207,21 +414,10 @@
   .list-title {
     flex-grow: 1; //防止文字段落不一樣跑行
 
-    .title {
-      margin-top: 20px;
-      padding: 0 32px;
-    }
-
-    .content-p {
-      margin-top: 12px;
-      margin-bottom: 24px;
-      padding: 0 32px;
-    }
   }
 
   .list-ai,
   .list-text {
-    padding: 20px 32px;
     border-top: 1px solid $color-3rd;
   }
 }
@@ -234,12 +430,8 @@
   }
 
   li {
-    padding: 14px 20px;
-    margin-right: 4px;
-
     a {
       color: $color-1st;
-
       &:hover {
         color: $color-4rd;
       }
@@ -248,8 +440,6 @@
 
   .one-black {
     background: $color-1st;
-    border-radius: 16px;
-
     a {
       color: $color-5rd;
     }
@@ -258,7 +448,6 @@
 
 .callToAction {
   align-items: center;
-  padding: 80px 0px;
   border-bottom: 2px solid $color-4rd;
 
   @include pad {
@@ -271,7 +460,6 @@
 
   &-h2 {
     color: $color-5rd;
-    margin-bottom: 48px;
 
     @include pad {
       font-size: 40px;
@@ -283,18 +471,11 @@
   }
 
   &-start {
-    border: 1px solid $color-5rd;
-    border-radius: 10px;
-    padding: 20px 35px;
     position: relative;
 
     &:hover {
       background: $color-5rd;
       color: $color-6rd;
-    }
-
-    p {
-      margin-right: 16px;
     }
 
     .arrow {
@@ -306,7 +487,6 @@
 }
 
 .sitemap {
-  padding: 80px 0;
   border-bottom: 2px solid $color-4rd;
 
   @include mobile {
@@ -316,6 +496,7 @@
 
   &-list {
     color: $color-5rd;
+    white-space: nowrap;
 
     @include pad {
       font-size: 60px;
@@ -345,7 +526,6 @@
 }
 
 .footer {
-  margin-top: 40px;
 
   @include mobile {
     flex-direction: column;
@@ -365,8 +545,6 @@
     flex-grow: 4;
 
     li {
-      padding: 0 20px 0 0;
-
       a:hover {
         color: $color-4rd;
       }
@@ -383,10 +561,6 @@
       color: $color-4rd;
     }
 
-    p {
-      margin-right: 15px;
-    }
-
     .arrow-up {
       position: absolute;
       right: 0px;
@@ -396,7 +570,7 @@
     @include mobile {
       position: absolute;
       right: 0px;
-      top: 0px;
+      top: 32px;
     }
   }
 }

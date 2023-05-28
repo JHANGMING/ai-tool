@@ -9,25 +9,155 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@9.3.2/swiper-bundle.min.css" />
   <title>AI工具王</title>
 </head>
 
 <body>
-  <div class="big-white">
+  <div class="container">
+    <div class="header d-flex-jfsp mb-40 pdy-20">
+      <div class="header-logo">
+        <h1><a href="#"><img src="/ai-tool/image/logo.png" alt="logo"></a></h1>
+      </div>
+      <button type="button" class="header-btn">
+        <i class="fa-solid fa-bars fa-lg"></i>
+      </button>
+      <ul class="header-meau d-flex fw-700">
+        <li class="mr-20"><a href="">首頁</a></li>
+        <li><a href="">定價</a></li>
+      </ul>
+    </div>
+    <div class="banner">
+      <h2 class="banner-h2 title-font-900 fz-120 color-w">透過</h2>
+      <h2 class="banner-h2 title-font-900 fz-120 color-w">AI 工具王的</h2>
+      <h2 class="banner-h2 title-font-900 fz-120 color-w">強大模型</h2>
+      <h2 class="banner-h2 title-font-900 fz-120 color-w">讓您的業務更聰明</h2>
+      <a href="#" class="banner-start btn-start fz-20 title-font-900 mt-40 mb-100 pdy-20">開始使用</a>
+      <div class="banner-animation">
+        <img src="/ai-tool/image/deco.png" alt="deco">
+        <img src="/ai-tool/image/deco.png" alt="deco">
+        <img src="/ai-tool/image/deco.png" alt="deco">
+      </div>
+    </div>
+    <div class="service mt-160">
+      <div class="service-title d-flex-jfsp">
+        <h2 class="service-title-h2 title-font-900 fz-32 color-w ">我們的服務</h2>
+        <h3 class="service-title-h3 title-font-900 fz-48 color-w">
+          <p>我們相信透過 AI 技術，</p>
+          <p>包括圖像識別、自然語言處理和機器翻譯等，讓您更快、更準確地做出決策。</p>
+        </h3>
+      </div>
+      <ul class="service-list d-flex-jfsp mt-80">
+        <li class="br-16 pdy-80 pdx-40">
+          <img src="/ai-tool/image/flash on.png" alt="flash on">
+          <h3 class="title-font-900 fz-32 color-w mt-20 mb-20">快速</h3>
+          <p class="color-f2">我們先進的推理基礎設施提供了極短的響應時間，讓你的產品服務不間斷。</p>
+        </li>
+        <li class="br-16 pdy-80 pdx-40">
+          <img src="/ai-tool/image/auto awesome.png" alt="auto awesome">
+          <h3 class="title-font-900 fz-32 color-w mt-20 mb-20">靈活</h3>
+          <p class="color-f2">我們的服務可以根據您的需求進行靈活調整，同時還可以滿足不同項目和預算的需求。</p>
+        </li>
+        <li class="br-16 pdy-80 pdx-40">
+          <img src="/ai-tool/image/library add.png" alt="library add">
+          <h3 class="title-font-900 fz-32 color-w mt-20 mb-20">擴充</h3>
+          <p class="color-f2">我們的服務支持多種擴充選項，可以滿足您的不斷增長的 AI 需求。</p>
+        </li>
+      </ul>
+    </div>
+    <div class="partner">
+      <h2 class="partner-title title-font-900 fz-32 color-w mt-160 mb-80">來自合作夥伴</h2>
+      <div class="partner-list">
+        <ul class="partner-list-1 d-flex mb-20">
+          <li><img class="img-style mr-20" src="/ai-tool/image/enterprise.png" alt="enterprise"></li>
+          <li><img class="img-style mr-20" src="/ai-tool/image/enterprise1.png" alt="enterprise1"></li>
+          <li><img class="img-style mr-20" src="/ai-tool/image/enterprise2.png" alt="enterprise2"></li>
+          <li><img class="img-style mr-20" src="/ai-tool/image/enterprise3.png" alt="enterprise3"></li>
+          <li><img class="img-style mr-20" src="/ai-tool/image/enterprise4.png" alt="enterprise4"></li>
+          <li><img class="img-style mr-20" src="/ai-tool/image/enterprise5.png" alt="enterprise5"></li>
+          <li><img class="img-style" src="/ai-tool/image/enterprise6.png" alt="enterprise6"></li>
+        </ul>
+        <ul class="partner-list-2 d-flex">
+          <li><img class="img-style mr-20" src="/ai-tool/image/enterprise7.png" alt="enterprise7"></li>
+          <li><img class="img-style mr-20" src="/ai-tool/image/enterprise8.png" alt="enterprise8"></li>
+          <li><img class="img-style mr-20" src="/ai-tool/image/enterprise9.png" alt="enterprise9"></li>
+          <li><img class="img-style mr-20" src="/ai-tool/image/enterprise5.png" alt="enterprise5"></li>
+          <li><img class="img-style mr-20" src="/ai-tool/image/enterprise11.png" alt="enterprise11"></li>
+          <li><img class="img-style mr-20" src="/ai-tool/image/enterprise12.png" alt="enterprise12"></li>
+          <li><img class="img-style" src="/ai-tool/image/enterprise7.png" alt="enterprise7"></li>
+        </ul>
+      </div>
+
+
+    </div>
+    <div class="swiper mt-160 mb-160" id="comment-swiper">
+      <ul class="swiper-wrapper mb-40">
+        <li class="swiper-slide br-16 pdx-40 pdy-40">
+          <div class="recommend-icon color-w mb-22">
+            <i class="fa-solid fa-star mr-6"></i><i class="fa-solid fa-star mr-6"></i><i
+              class="fa-solid fa-star mr-6"></i><i class="fa-solid fa-star mr-6"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="color-w">非常喜歡 AI工具王 提供的 AI 模型租賃服務，使用起來非常方便，而且效果非常好。對於我們公司的業務來說，這個服務非常重要，因為我們需要大量的數據進行分析和預測，AI工具王
+            提供的AI模型能夠幫助我們節省大量時間和成本，實在是太棒了！</p>
+          <div class="recommend-card d-flex color-w">
+            <img src="/ai-tool/image/avatar3.png" alt="avatar3" class="img-frame">
+            <div class="recommend-text">
+              <h3>陳小姐</h3>
+              <p>ABC科技有限公司</p>
+            </div>
+          </div>
+        </li>
+        <li class="swiper-slide br-16 pdx-40 pdy-40">
+          <div class="recommend-icon color-w mb-22">
+            <i class="fa-solid fa-star mr-6"></i><i class="fa-solid fa-star mr-6"></i><i
+              class="fa-solid fa-star mr-6"></i><i class="fa-solid fa-star mr-6"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="color-w">作為一家醫療器材公司，我們非常關注人工智能技術的應用，而 AI工具王 提供的 AI 模型租賃服務為我們帶來了很大的幫助。我們使用
+            AI工具王的模型進行醫學影像分析和預測，這些模型非常精確，能夠幫助我們更好地診斷病情，提高治療效果。感謝AI工具王 團隊的辛勤工作！</p>
+          <div class="recommend-card d-flex color-w">
+            <img src="/ai-tool/image/avatar1.png" alt="avatar1" class="img-frame">
+            <div class="recommend-text">
+              <h3>劉小姐</h3>
+              <p>XYZ 醫療器材有限公司</p>
+            </div>
+          </div>
+        </li>
+        <li class="swiper-slide br-16 pdx-40 pdy-40">
+          <div class="recommend-icon color-w mb-22">
+            <i class="fa-solid fa-star mr-6"></i><i class="fa-solid fa-star mr-6"></i><i
+              class="fa-solid fa-star mr-6"></i><i class="fa-solid fa-star mr-6"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="color-w">我們銀行一直在尋找能夠幫助我們提高風險控制和客戶服務的解決方案，而 AI工具王 提供的 AI 模型租賃服務正好滿足了我們的需求。我們使用
+            AI工具王的模型進行客戶信用評估和詐騙檢測等任務，這些模型非常準確，能夠幫助我們更好地控制風險，提高客戶滿意度。非常感謝 AI工具王 團隊的支持！</p>
+          <div class="recommend-card d-flex color-w">
+            <img src="/ai-tool/image/avatar2.png" alt="avatar2" class="img-frame">
+            <div class="recommend-card-text">
+              <h3>黃先生</h3>
+              <p>EFG 銀行</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="swiper-pagination"></div>
+    </div>
+
+
+  </div>
+  <div class="big-white pdy-160 br-160">
     <div class="container">
       <div class="tools">
-        <h2 class="tools-h2 title-font-900 fz-80 font-tac">這些超酷的應用，都來自AI工具王</h2>
+        <h2 class="tools-h2 title-font-900 fz-80 font-tac mb-80">這些超酷的應用，都來自AI工具王</h2>
         <div class="tools-input-icon">
           <i class="fa-solid fa-magnifying-glass fa-sm icon"></i>
-          <input type="text" placeholder="輸入關鍵字搜尋" class="search">
+          <input type="text" placeholder="輸入關鍵字搜尋" class="search mb-24 br-16 pdx-76 pdy-20">
         </div>
-        <div class="tools-search d-flex-jfsp">
+        <div class="tools-search d-flex-jfsp mb-40">
           <div class="tools-search-icon-filter">
             <i class="icon-filter fa-solid fa-filter fa-sm"></i>
             <input type="button" value="篩選" class="filter icon-font">
           </div>
           <ul class="tools-search-list d-flex">
-            <li class="all-block fw-700"><a href="#">全部</a></li>
+            <li class="one-black fw-700 br-16"><a href="#">全部</a></li>
             <li><a href="#">聊天</a></li>
             <li><a href="#">影像辨識</a></li>
             <li><a href="#">翻譯</a></li>
@@ -42,120 +172,120 @@
         </div>
       </div>
       <ul class="list d-flex-jfsp">
-        <li class="card d-column">
+        <li class="card d-column mb-24 br-16">
           <div class="img">
             <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/tool1.png"
               alt="Chatbot Builder">
           </div>
-          <div class="list-title">
-            <h3 class="title title-font-900 fz-20">Chatbot Builder</h3>
-            <p class="content-p content-p-font">建立智能化的聊天機器人，解答常見問題、提供客戶支援、收集反饋等。</p>
+          <div class="list-title pdx-32">
+            <h3 class="title title-font-900 fz-20 mt-20 ">Chatbot Builder</h3>
+            <p class="content-p content-p-font my-12-24">建立智能化的聊天機器人，解答常見問題、提供客戶支援、收集反饋等。</p>
           </div>
-          <div class="list-ai d-flex-jfsp">
+          <div class="list-ai d-flex-jfsp pdx-32 pdy-20">
             <p class="fw-700">AI 模型</p>
             <span>卡卡</span>
           </div>
-          <div class="list-text d-flex-jfsp">
+          <div class="list-text d-flex-jfsp pdx-32 pdy-20">
             <p>#聊天</p>
             <a href="#">
               <i class="fa-solid fa-share-nodes icon-color-fz-18"></i>
             </a>
           </div>
         </li>
-        <li class="card d-column">
+        <li class="card d-column mb-24 br-16">
           <div class="img"><img
               src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/tool2.png"
               alt="Image Recognition">
           </div>
-          <div class="list-title">
-            <h3 class="title title-font-900 fz-20">Image Recognition Platform</h3>
-            <p class="content-p content-p-font">專業的圖像識別平台，識別圖像、分類、標記等。</p>
+          <div class="list-title pdx-32">
+            <h3 class="title title-font-900 fz-20 mt-20">Image Recognition Platform</h3>
+            <p class="content-p content-p-font my-12-24">專業的圖像識別平台，識別圖像、分類、標記等。</p>
           </div>
-          <div class="list-ai d-flex-jfsp">
+          <div class="list-ai d-flex-jfsp pdx-32 pdy-20">
             <p class="fw-700">AI 模型</p>
             <span>杰杰</span>
           </div>
-          <div class="list-text d-flex-jfsp">
+          <div class="list-text d-flex-jfsp pdx-32 pdy-20">
             <p>#影像辨識</p>
             <a href="#">
               <i class="fa-solid fa-share-nodes icon-color-fz-18"></i>
             </a>
           </div>
         </li>
-        <li class="card d-column">
+        <li class="card d-column mb-24 br-16">
           <div class="img">
             <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/tool3.png"
               alt="Language Translation API">
           </div>
-          <div class="list-title">
-            <h3 class="title title-font-900 fz-20">Language Translation API</h3>
-            <p class="content-p content-p-font">專業的語言翻譯 API，實現文本翻譯功能，支援多種格式的文本。</p>
+          <div class="list-title pdx-32">
+            <h3 class="title title-font-900 fz-20 mt-20 mt-20">Language Translation API</h3>
+            <p class="content-p content-p-font my-12-24">專業的語言翻譯 API，實現文本翻譯功能，支援多種格式的文本。</p>
           </div>
-          <div class="list-ai d-flex-jfsp">
+          <div class="list-ai d-flex-jfsp pdx-32 pdy-20">
             <p class="fw-700">AI 模型</p>
             <span>琪琪</span>
           </div>
-          <div class="list-text d-flex-jfsp">
+          <div class="list-text d-flex-jfsp pdx-32 pdy-20">
             <p>#翻譯</p>
             <a href="#">
               <i class="fa-solid fa-share-nodes icon-color-fz-18"></i>
             </a>
           </div>
         </li>
-        <li class="card d-column">
+        <li class="card d-column mb-24 br-16">
           <div class="img">
             <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/tool4.png"
               alt="Sentiment Analysis API">
           </div>
-          <div class="list-title">
-            <h3 class="title title-font-900 fz-20">Sentiment Analysis API</h3>
-            <p class="content-p content-p-font">自動識別文本中的情感傾向，包括正向、負向和中性等。適用於情感分析、社交媒體監控、市場調查等。</p>
+          <div class="list-title pdx-32">
+            <h3 class="title title-font-900 fz-20 mt-20 ">Sentiment Analysis API</h3>
+            <p class="content-p content-p-font my-12-24">自動識別文本中的情感傾向，包括正向、負向和中性等。適用於情感分析、社交媒體監控、市場調查等。</p>
           </div>
-          <div class="list-ai d-flex-jfsp">
+          <div class="list-ai d-flex-jfsp pdx-32 pdy-20">
             <p class="fw-700">AI 模型</p>
             <span>昊昊</span>
           </div>
-          <div class="list-text d-flex-jfsp">
+          <div class="list-text d-flex-jfsp pdx-32 pdy-20">
             <p>#行銷</p>
             <a href="#">
               <i class="fa-solid fa-share-nodes icon-color-fz-18"></i>
             </a>
           </div>
         </li>
-        <li class="card d-column">
+        <li class="card d-column mb-24 br-16">
           <div class="img">
             <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/tool5.png"
               alt="Fraud Detection Platform">
           </div>
-          <div class="list-title">
-            <h3 class="title title-font-900 fz-20">Fraud Detection Platform</h3>
-            <p class="content-p content-p-font">預防詐騙活動，適用於銀行、金融、電商等。</p>
+          <div class="list-title pdx-32">
+            <h3 class="title title-font-900 fz-20 mt-20">Fraud Detection Platform</h3>
+            <p class="content-p content-p-font my-12-24">預防詐騙活動，適用於銀行、金融、電商等。</p>
           </div>
-          <div class="list-ai d-flex-jfsp">
+          <div class="list-ai d-flex-jfsp pdx-32 pdy-20">
             <p class="fw-700">AI 模型</p>
             <span>卡卡</span>
           </div>
-          <div class="list-text d-flex-jfsp">
+          <div class="list-text d-flex-jfsp pdx-32 pdy-20">
             <p>#客服</p>
             <a href="#">
               <i class="fa-solid fa-share-nodes icon-color-fz-18"></i>
             </a>
           </div>
         </li>
-        <li class="card d-column">
+        <li class="card d-column mb-24 br-16">
           <div class="img">
             <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/tool6.png"
               alt="Voice Assistant SDK">
           </div>
-          <div class="list-title">
-            <h3 class="title title-font-900 fz-20">Voice Assistant SDK</h3>
-            <p class="content-p content-p-font">通過語音控制應用程式、設備，實現多種功能，例如播放音樂、查詢天氣、發送信息等。</p>
+          <div class="list-title pdx-32">
+            <h3 class="title title-font-900 fz-20 mt-20">Voice Assistant SDK</h3>
+            <p class="content-p content-p-font my-12-24">通過語音控制應用程式、設備，實現多種功能，例如播放音樂、查詢天氣、發送信息等。</p>
           </div>
-          <div class="list-ai d-flex-jfsp">
+          <div class="list-ai d-flex-jfsp pdx-32 pdy-20">
             <p class="fw-700">AI 模型</p>
             <span>杰杰</span>
           </div>
-          <div class="list-text d-flex-jfsp">
+          <div class="list-text d-flex-jfsp pdx-32 pdy-20">
             <p>#生產力</p>
             <a href="#">
               <i class="fa-solid fa-share-nodes icon-color-fz-18"></i>
@@ -164,24 +294,24 @@
         </li>
       </ul>
       <ul class="pagination d-flex fw-700 fz-14">
-        <li class="one-black"><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li><a href="#">></a></li>
+        <li class="one-black pdx-20 pdy-14 mr-4 br-16"><a href="#" class="color-1st">1</a></li>
+        <li class="pdx-20 pdy-14 mr-4"><a href="#">2</a></li>
+        <li class="pdx-20 pdy-14 mr-4"><a href="#">3</a></li>
+        <li class="pdx-20 pdy-14 mr-4"><a href="#">4</a></li>
+        <li class="pdx-20 pdy-14 mr-4"><a href="#">5</a></li>
+        <li class="pdx-20 pdy-14 "><a href="#">></a></li>
       </ul>
     </div>
   </div>
   <div class="container">
-    <div class="callToAction d-column">
-      <h2 class="callToAction-h2 fz-48 title-font-900 font-tac">現在就來建立屬於你的服務吧</h2>
-      <a href="" class="callToAction-start d-flex">
-        <p class="fz-20 title-font-900">開始使用</p>
+    <div class="callToAction d-column pdy-80">
+      <h2 class="callToAction-h2 fz-48 title-font-900 font-tac mb-48">現在就來建立屬於你的服務吧</h2>
+      <a href="" class="callToAction-start btn-start d-flex pdx-35 pdy-20">
+        <p class="fz-20 title-font-900 mr-16">開始使用</p>
         <i class="arrow fa-solid fa-location-arrow fa-sm"></i>
       </a>
     </div>
-    <div class="sitemap d-flex-jfsp">
+    <div class="sitemap d-flex-jfsp pdy-80">
       <div class="sitemap-list fz-80 title-font-900 ">
         <ul>
           <li>首頁</li>
@@ -190,21 +320,23 @@
       </div>
       <div class="sitemap-log"><img src="/ai-tool/image/logo.png" alt="logo"></div>
     </div>
-    <div class="footer d-flex-jfsp">
+    <div class="footer d-flex-jfsp pdy-32">
       <div class="footer-copyright fw-700">
         <p>AI工具王 © 2023</p>
       </div>
       <ul class="footer-social d-flex fw-700">
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Twitter</a></li>
+        <li class="pdr-20"><a href="#">Facebook</a></li>
+        <li class="pdr-20"><a href="#">Twitter</a></li>
         <li><a href="#">Instagram</a></li>
       </ul>
       <a href="#" class="footer-top d-flex fw-700">
-        <p>Back to top</p>
+        <p class="mr-16">Back to top</p>
         <i class="arrow-up fa-solid fa-arrow-up-long fa-xs"></i>
       </a>
     </div>
   </div>
+  <script src="https://unpkg.com/swiper@9.3.2/swiper-bundle.min.js"></script>
+  <script src="/ai-tool/js/ai-tools.js"></script>
 </body>
 
 </html>

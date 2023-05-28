@@ -23,39 +23,196 @@ body {
   font-size: 16px;
   background: $color-6rd;
 }
-.fw-400 {
-  font-weight: 400;
+//font-weight
+.fw {
+  &-400 {
+    font-weight: 400;
+  }
+
+  &-700 {
+    font-weight: 700;
+  }
+
+  &-900 {
+    font-weight: 900;
+  }
 }
-.fw-700 {
-  font-weight: 700;
+//font-size
+.fz{
+  &-16{
+    font-size: 16px;
+  }
+  &-20 {
+    font-size: 20px;
+  }
+  &-32 {
+    font-size: 32px;
+  }
+  &-48 {
+    font-size: 48px;
+  }
+  &-80 {
+    font-size: 80px;
+  }
+  &-120 {
+    font-size: 120px;
+  }
 }
-.fw-900 {
-  font-weight: 900;
+//color-white，color-f2f2f2
+.color{
+  &-w {
+    color: $color-5rd;
+  }
+  &-f2{
+    color:$color-3rd;
+  }
 }
 
-.fz-16{
-  font-size: 16px;
+//margin-right
+.mr{
+  &-4 {
+    margin-right: 4px;
+  }
+  &-6{
+  margin-right: 6px;
+  }
+  &-16 {
+    margin-right: 16px;
+  }
+  &-20 {
+    margin-right: 20px;
+  }
+  &-24 {
+    margin-right: 24px;
+  }
 }
-.fz-20 {
-  font-size: 20px;
+
+//margin-bottom
+.mb{
+  &-12 {
+    margin-bottom: 12px;
+  }
+  &-20 {
+    margin-bottom: 20px;
+  }
+  &-22{
+    margin-bottom: 22px;
+  }
+  &-24 {
+    margin-bottom: 24px;
+  }
+  &-40 {
+    margin-bottom: 40px;
+  }
+  &-48 {
+    margin-bottom: 48px;
+  }
+  &-80 {
+    margin-bottom: 80px;
+  }
+  &-100 {
+    margin-bottom: 100px;
+  }
+  &-160 {
+    margin-bottom: 160px;
+  }
 }
-.fz-48 {
-  font-size: 48px;
+
+//margin-top
+.mt{
+  &-20 {
+    margin-top: 20px;
+  }
+  &-40{
+    margin-top: 40px;
+  }
+  &-80 {
+    margin-top: 80px;
+  }
+  &-160 {
+    margin-top: 160px;
+  }
 }
-.fz-80{
-  font-size: 80px;
+
+//padding-right
+.pdr{
+  &-20{
+    padding-right: 20px;
+  }
 }
-.mr-24{
-  margin-right: 24px;
+
+
+.my{
+  &-12-24{
+    margin-top: 12px;
+    margin-bottom: 24px;
+  }
 }
-.font-tac{
+
+.pdx {
+  &-20 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  &-32 {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  &-35 {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+  &-40 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  &-76 {
+    padding-left: 76px;
+    padding-right: 76px;
+  }
+}
+
+.pdy {
+  &-14 {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+  &-20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  &-32 {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  &-40 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  &-80 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  &-160 {
+    padding-top: 160px;
+    padding-bottom: 160px;
+  }
+}
+
+
+
+//text-align: center
+.font-tac {
   text-align: center;
 }
+
+//內文樣式
 .content-p-font {
   font-size: 14px;
   color: $color-2nd;
 }
 
+//文字title樣式
 .title-font-900 {
   font-weight: 900;
   line-height: 1.2;
@@ -65,17 +222,36 @@ body {
   color: $color-1st;
   font-size: 18px;
 }
-.icon-font{
+
+//有icon按鈕樣式
+.icon-font {
   background: $color-5rd;
   border: 1px solid $color-3rd;
   border-radius: 16px;
   padding: 20px 60px 20px 40px;
-  font-size: 16px;
-  font-weight: 400;
 }
-.d-flex{
+
+//開始使用按鈕
+.btn-start {
+  border: 1px solid $color-5rd;
+  border-radius: 16px;
+}
+
+//border-radius
+.br{
+  &-16 {
+    border-radius: 16px;
+  }
+  &-160 {
+    border-radius: 160px;
+  }
+}
+
+
+.d-flex {
   display: flex;
 }
+
 .d-flex-jfsp {
   display: flex;
   justify-content: space-between;
@@ -85,3 +261,18 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+//廠商logo
+.img-style{
+  width: 160px;
+  height: 40px;
+  object-fit: cover;
+}
+
+//小人頭照片
+.img-frame {          
+  width: 48px;
+  height: 48px;
+  margin-right: 16px;
+}
+
