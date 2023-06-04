@@ -1,0 +1,264 @@
+/* main */
+.banner {
+  &-h2 {
+    @include pad {
+      font-size: 80px;
+    }
+
+    @include mobile {
+      font-size: 48px;
+    }
+  }
+
+  //開始按鈕
+  &-start {
+    display: block;
+    max-width: 160px;
+    text-align: center;
+
+    &:hover {
+      background: $color-5rd;
+      color: $color-6rd;
+    }
+  }
+
+  //動畫
+  &-animation {
+    text-align: end;
+    overflow: hidden;
+
+    .deco-img-1,
+    .deco-img-2,
+    .deco-img-3 {
+      position: relative;
+    }
+
+    .deco-img-1 {
+      animation: 5s ease-in-out infinite 3.5s;
+      animation-name: decomove;
+    }
+
+    .deco-img-2 {
+      animation: 5s ease-in-out infinite 2.5s;
+      animation-name: decomove;
+    }
+
+    .deco-img-3 {
+      animation: 5s ease-in-out infinite 1.5s;
+      animation-name: decomove;
+    }
+
+    @include mobile {
+      text-align: center;
+
+      img {
+        width: 30%;
+      }
+    }
+
+  }
+
+}
+
+.service {
+  &-title {
+    @include mobile {
+      flex-direction: column;
+      padding-left: 40px;
+      // align-items: center;
+    }
+
+    &-h2 {
+      max-width: 414px;
+
+      @include pad {
+        width: 30%;
+      }
+
+      @include mobile {
+        font-size: 20px;
+        margin-bottom: 24px;
+      }
+    }
+
+    &-h3 {
+      max-width: 856px;
+
+      @include pad {
+        font-size: 40px;
+        width: 60%;
+      }
+
+      @include mobile {
+        font-size: 32px;
+        width: 90%;
+      }
+    }
+  }
+
+  &-list {
+    @include pad {
+      padding: 20px 20px;
+      width: 100%;
+    }
+
+    @include mobile {
+      width: 100%;
+      margin-top: 40px;
+      padding: 20px 20px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    li {
+      flex: 1;
+      border: 1px solid $color-2nd;
+      width:33%;
+      @include pad {
+        margin-right: 12px;
+        padding: 40px 20px;
+      }
+
+      @include mobile {
+        padding: 40px 40px;
+        width: 90%;
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+
+.partner {
+
+  &-title {
+    @include pad {
+      margin-top: 100px;
+    }
+
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+
+  &-list {
+    overflow: hidden;
+    position: relative;
+
+    & ::before {
+      content: "";
+      width: 196px;
+      height: 40px;
+      background-image: $background-linear;
+      position: absolute;
+      left: 0;
+    }
+
+    & ::after {
+      content: "";
+      width: 196px;
+      height: 40px;
+      background-image: $background-linear;
+      transform: rotate(-180deg);
+      position: absolute;
+      right: 0px;
+    }
+  }
+
+  &-list-1 {
+    width: 1296px;
+  }
+
+  &-list-2 {
+    width: 1296px;
+    padding-left: 100px;
+  }
+}
+
+.swiper {
+
+  &-wrapper {
+    max-width: 1296px;
+
+    @include mobile {
+      margin-top: 48px;
+    }
+
+    li {
+      width: 416px;
+      background: rgba(255, 255, 255, 0.08);
+      display: flex;
+      flex-direction: column;
+      height: initial;
+
+      p {
+        flex-grow: 1;
+        padding-bottom: 48px;
+
+        @include mobile {
+          margin-bottom: 10px;
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  &-pagination {
+    position: absolute;
+    width: 100px;
+    height: 20px;
+  }
+
+  &-pagination .swiper-pagination-bullet {
+    /* 設定單個分頁按鈕的顏色 */
+    background: $color-2nd;
+    opacity: 1;
+  }
+
+  &-pagination .swiper-pagination-bullet-active {
+    /* 設定當前選中分頁按鈕的顏色 */
+    background: $color-5rd;
+  }
+}
+
+.callToAction {
+  align-items: center;
+  border-bottom: 2px solid $color-4rd;
+
+  @include pad {
+    padding: 60px 100px;
+  }
+
+  @include mobile {
+    padding: 60px 80px;
+  }
+
+  &-h2 {
+    color: $color-5rd;
+
+    @include pad {
+      font-size: 40px;
+    }
+
+    @include mobile {
+      font-size: 32px;
+    }
+  }
+
+  &-start {
+    position: relative;
+
+    &:hover {
+      background: $color-5rd;
+      color: $color-6rd;
+    }
+
+    .arrow {
+      position: absolute;
+      right: 24px;
+      top: calc(50%);
+    }
+  }
+}
+
+
+

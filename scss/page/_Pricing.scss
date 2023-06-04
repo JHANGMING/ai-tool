@@ -1,0 +1,183 @@
+/* main */
+.Pricing-banner {
+  &-h2 {
+    @include pad {
+      font-size: 80px;
+    }
+
+    @include mobile {
+      font-size: 48px;
+    }
+  }
+  &-h3{
+    max-width: 636px;
+    @include mobile {
+      font-size: 28px;
+    }
+  }
+
+
+  //動畫
+  &-animation {
+    overflow: hidden;
+
+    .deco-img-1,
+    .deco-img-2,
+    .deco-img-3 {
+      position: relative;
+    }
+
+    .deco-img-1 {
+      animation: 5s ease-in-out infinite 3.5s;
+      animation-name: decomove;
+    }
+
+    .deco-img-2 {
+      animation: 5s ease-in-out infinite 2.5s;
+      animation-name: decomove;
+    }
+
+    .deco-img-3 {
+      animation: 5s ease-in-out infinite 1.5s;
+      animation-name: decomove;
+    }
+
+    @include mobile {
+      text-align: center;
+
+      img {
+        width: 30%;
+      }
+    }
+
+  }
+
+}
+
+.Pricing{
+  &-h3{
+    @include mobile {
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+  }
+  &-list{
+    flex-wrap: wrap;
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 80px;
+    }
+  }
+  &-card{
+    width: 49%;
+    justify-content: space-between;
+    
+    @include mobile {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  &-content{
+    list-style: inside;
+    margin-bottom: 136px;
+    li{
+      color: $color-3rd;
+    }
+  }
+  &-num{
+    border-top:1px solid $color-2nd;
+  }
+}
+
+.User-Term{
+  @include mobile {
+      display: flex;
+      flex-direction: column;
+    }
+  &-h3{
+    @include pad {
+      width: 40%;
+    }
+    @include mobile {
+      font-size: 20px;
+      margin-bottom: 48px;
+    }
+  }
+  &-list{
+    @include pad {
+      width: 70%;
+    }
+    @include mobile {
+      width: 100%;
+      margin-bottom: 80px;
+    }
+  }
+    &-h4 {
+      @include mobile {
+        font-size: 32px;
+      }
+    }
+  
+    &-p {
+      @include mobile {
+          font-size: 16px;
+        }
+    }
+  
+  &-item{
+    border-bottom: 1px solid $color-2nd;
+    
+  }
+}
+
+.question{
+  border-bottom: 2px solid $color-4rd;
+  @include mobile {
+      font-size: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+  &-title{
+    @include pad {
+      width: 40%;
+    }
+    @include mobile {
+      margin-top: 80px;
+    }
+  }
+  &-list{
+    width: 856px;
+    
+    @include pad {
+      width: 70%;
+    }
+    @include mobile {
+      margin-top: 20px;
+      margin-bottom:80px;
+      width: 100%;
+    }
+  }
+  &-item{
+    border: 1px solid #525252;
+
+    .remove-icon {
+      display: none;
+    }
+
+    &.active {
+      .add-icon {
+        display: none;
+      }
+
+      .remove-icon {
+        display: block;
+      }
+    }
+
+  }
+  .collapse-content p.show {
+    display: block;
+  }
+}

@@ -1,5 +1,12 @@
-@import "variable";
-@import "normalize";
-@import "base";
-@import "mixin1";
-@import "main";
+@import "utils/variable";
+@import "utils/mixin";
+@import "base/normalize";
+@import "base/base";
+@import "components/placeholders";
+@import "components/utilities";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/card";
+@import "page/index";
+@import "page/Pricing";
+

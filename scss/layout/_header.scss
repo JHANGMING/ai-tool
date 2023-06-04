@@ -1,0 +1,64 @@
+.header {
+  border-bottom: 2px solid $color-5rd;
+  margin-bottom: 80px;
+  position: relative;
+  &-logo {
+    a {
+      display: block;
+      width: 190px;
+      height: 40px;
+      background-size: 189px 40px;
+      background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/9d0ceff5ed470b504331b8d897ea8518b8f163cd/2023web-camp/logo.png");
+      text-indent: 101%;
+      white-space: nowrap;
+      overflow: hidden;
+      justify-content: center;
+    }
+  }
+
+  &-meau {
+    align-items: center;
+
+    @include pad {
+      display: none;
+    }
+  }
+
+  //漢堡按鈕
+  &-btn {
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    color: #ffffff;
+    display: none;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    /* 在電腦版時不顯示 */
+    @include pad {
+      display: block;
+    }
+  }
+  &-collapse{
+    display: none;
+    /* 在電腦版時不顯示 */
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: calc(100vh - 100px);
+    /* 佔滿整個瀏覽器高度扣掉 navbar 高度 */
+    background-color: #000000;
+    border-top: 1px solid #ffffff;
+    
+  }
+  @include pad {
+    .header-collapse.show {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  
+}

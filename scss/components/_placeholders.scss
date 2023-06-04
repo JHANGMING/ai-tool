@@ -1,29 +1,3 @@
-//全站設定
-a {
-  text-decoration: none;
-  color: $color-5rd;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: $font-family-base;
-  line-height: 1.5;
-  color: $color-1st;
-  font-weight: 400;
-  font-size: 16px;
-  background: $color-6rd;
-}
-
 //font-weight
 .fw {
   &-400 {
@@ -40,28 +14,28 @@ body {
 }
 
 //font-size
-.fz {
-  &-16 {
+.font {
+  &-xs { 
     font-size: 16px;
   }
 
-  &-20 {
+  &-sm {
     font-size: 20px;
   }
 
-  &-32 {
+  &-md {
     font-size: 32px;
   }
 
-  &-48 {
+  &-lg {
     font-size: 48px;
   }
 
-  &-80 {
+  &-xl {
     font-size: 80px;
   }
 
-  &-120 {
+  &-xxl {
     font-size: 120px;
   }
 }
@@ -75,210 +49,203 @@ body {
   &-f2 {
     color: $color-3rd;
   }
+  &-gray{
+    color:rgb(145, 145, 145);
+  }
 }
 
 //margin-right
 .mr {
-  &-4 {
+  &-xs {
     margin-right: 4px;
   }
 
-  &-6 {
+  &-sm {
     margin-right: 6px;
   }
 
-  &-16 {
+  &-md {
     margin-right: 16px;
   }
 
-  &-20 {
+  &-lg {
     margin-right: 20px;
   }
 
-  &-24 {
+  &-xl {
     margin-right: 24px;
   }
 }
 
 //margin-bottom
 .mb {
-  &-12 {
+  &-xxs {
+    margin-bottom: 8px;
+  }
+  &-xs {
     margin-bottom: 12px;
   }
-
-  &-20 {
+  &-ms {
+    margin-bottom: 16px;
+  }
+  &-sm {
     margin-bottom: 20px;
   }
 
-  &-22 {
+  &-md {
     margin-bottom: 22px;
   }
 
-  &-24 {
+  &-lg {
     margin-bottom: 24px;
   }
 
-  &-40 {
+  &-xl {
     margin-bottom: 40px;
   }
 
-  &-48 {
+  &-xxl {
     margin-bottom: 48px;
   }
 
-  &-80 {
+  &-3xl {
     margin-bottom: 80px;
   }
 
-  &-100 {
+  &-4xl {
     margin-bottom: 100px;
   }
 
-  &-160 {
+  &-5xl {
     margin-bottom: 160px;
+  }
+  &-6xl {
+    margin-bottom: 238px;
   }
 }
 
 //margin-top
 .mt {
-  &-20 {
+  &-xs {
     margin-top: 20px;
   }
 
-  &-40 {
+  &-sm {
     margin-top: 40px;
   }
 
-  &-80 {
+  &-md {
     margin-top: 80px;
   }
 
-  &-160 {
+  &-lg {
     margin-top: 160px;
   }
 }
 
+.ml{
+  &-md{
+    margin-left: 48px;
+  }
+}
+
+
 //padding-right
-.pdr {
-  &-20 {
+.pr {
+  &-sm {
     padding-right: 20px;
+  }
+}
+
+.pt{
+  &-sm {
+    padding-top: 20px;
+  }
+}
+
+.pb {
+  &-md {
+    padding-bottom: 40px;
   }
 }
 
 //margin y軸
 .my {
-  &-12-24 {
+  &-sm {
     margin-top: 12px;
     margin-bottom: 24px;
   }
 }
 
 //padding X軸
-.pdx {
-  &-20 {
+.px {
+  &-xs {
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  &-32 {
+  &-sm {
     padding-left: 32px;
     padding-right: 32px;
   }
 
-  &-35 {
+  &-md {
     padding-left: 35px;
     padding-right: 35px;
   }
 
-  &-40 {
+  &-lg {
     padding-left: 40px;
     padding-right: 40px;
   }
 
-  &-76 {
+  &-xl {
     padding-left: 76px;
     padding-right: 76px;
   }
 }
 
 //padding y軸
-.pdy {
-  &-14 {
+.py {
+  &-xs {
     padding-top: 14px;
     padding-bottom: 14px;
   }
 
-  &-20 {
+  &-sm {
     padding-top: 20px;
     padding-bottom: 20px;
   }
 
-  &-32 {
+  &-md {
     padding-top: 32px;
     padding-bottom: 32px;
   }
 
-  &-40 {
+  &-lg {
     padding-top: 40px;
     padding-bottom: 40px;
   }
 
-  &-80 {
+  &-xl {
     padding-top: 80px;
     padding-bottom: 80px;
   }
 
-  &-160 {
+  &-xxl {
     padding-top: 160px;
     padding-bottom: 160px;
   }
 }
 
 
-
-//text-align: center
-.font-tac {
-  text-align: center;
-}
-
-//內文樣式
-.content-p-font {
-  font-size: 14px;
-  color: $color-2nd;
-}
-
-//文字title樣式
-.title-font-900 {
-  font-weight: 900;
-  line-height: 1.2;
-}
-
-.icon-color-fz-18 {
-  color: $color-1st;
-  font-size: 18px;
-}
-
-//有icon按鈕樣式
-.icon-font {
-  background: $color-5rd;
-  border: 1px solid $color-3rd;
-  border-radius: 16px;
-  padding: 20px 60px 20px 40px;
-}
-
-//開始使用按鈕
-.btn-start {
-  border: 1px solid $color-5rd;
-  border-radius: 16px;
-}
-
 //border-radius
 .br {
-  &-16 {
+  &-sm {
     border-radius: 16px;
   }
 
-  &-160 {
+  &-xl {
     border-radius: 160px;
   }
 }
@@ -298,39 +265,18 @@ body {
   flex-direction: column;
 }
 
-//廠商logo
-.img-style {
-  width: 160px;
-  height: 40px;
-  object-fit: cover;
+.jc-end{
+  justify-content: flex-end;
 }
 
-//小人頭照片
-.img-frame {
-  width: 48px;
-  height: 48px;
-  margin-right: 16px;
+.d-flex-align-c{
+  display: flex;
+  align-items: center;
+}
+.d-none {
+  display: none;
 }
 
-//動畫
-@keyframes decomove {
-  0% {
-    top: 0px;
-  }
-
-  30% {
-    top: -300px;
-  }
-
-  40% {
-    left: 600px;
-  }
-
-  50% {
-    top: 400px;
-  }
-
-  80% {
-    top: 0px;
-  }
+.d-block {
+  display: block;
 }

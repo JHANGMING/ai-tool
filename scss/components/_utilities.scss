@@ -1,0 +1,132 @@
+.big-white {
+  max-width: 1920px;
+  background: $color-5rd;
+
+  @include pad {
+    border-radius: 100px;
+    padding: 40px 0;
+  }
+
+  @include mobile {
+    border-radius: 80px;
+  }
+}
+
+.container {
+  max-width: 1326px;
+  margin: 0 auto;
+
+  @include pc {
+    max-width: 1340px;
+  }
+
+  @include pad {
+    max-width: 100%;
+    padding: 12px;
+  }
+
+  @include mobile {
+    max-width: 100%;
+    padding: 12px;
+  }
+}
+
+
+
+//text-align: center
+.font-tac {
+  text-align: center;
+}
+
+//內文樣式
+.content-p-font {
+  font-size: 14px;
+  color: $color-2nd;
+}
+
+//文字title樣式
+.title-font-900 {
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+
+//card-icon
+.card-icon {
+  color: $color-1st;
+  font-size: 18px;
+}
+
+//btn
+.btn {
+  background: $color-5rd;
+  border: 1px solid $color-3rd;
+  border-radius: 16px;
+  padding: 20px 32px 20px 40px;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    border-color: $color-2nd;
+  }
+}
+
+//btn 樣式
+.btn-font {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.btn-icons {
+  padding-left: 16px;
+  font-size: 20px;
+}
+
+//開始使用按鈕
+.btn-start {
+  border: 1px solid $color-5rd;
+  border-radius: 16px;
+}
+
+.Pricing-card{
+  border: 1px solid $color-2nd;
+  border-radius: 16px;
+}
+
+//廠商logo
+.img-style {
+  width: 160px;
+  height: 40px;
+  object-fit: cover;
+}
+
+//小人頭照片
+.img-frame {
+  width: 48px;
+  height: 48px;
+  margin-right: 16px;
+}
+
+//動畫
+@keyframes decomove {
+  0% {
+    top: 0px;
+  }
+
+  30% {
+    top: -300px;
+  }
+
+  40% {
+    opacity: 0.01;
+  }
+
+  50% {
+    top: 400px;
+  }
+
+  80% {
+    top: 0px;
+  }
+}

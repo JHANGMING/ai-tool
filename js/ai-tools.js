@@ -1,3 +1,4 @@
+/*Swiper*/
 function initSwiper() {
   /* 
   id="comment-swiper" 區塊是我想要使用 swiper 套件的範圍
@@ -32,5 +33,42 @@ function initSwiper() {
   });
 }
 
-
 initSwiper();
+
+/*dropdown-btn*/
+/* 開起選單 */
+$(".dropdown-btn").click(function (e) {
+  $(".dropdown-menu").toggleClass("show");
+});
+
+/*  切換按鈕文字  */
+$(".new-to-old").click(function (e) {
+  e.preventDefault();
+  $(".dropdown-menu").toggleClass("show");
+  $(".dropdown-btnText").text($(".new-to-old").text());
+});
+
+$(".old-to-new").click(function (e) {
+  e.preventDefault();
+  $(".dropdown-menu").toggleClass("show");
+  $(".dropdown-btnText").text($(".old-to-new").text());
+});
+
+/*  常見問題 展開  */
+$('.question-item').click(function (e) { // 選擇具有 '.qa-item' 的元素，點擊時執行以下代碼
+  $(this).toggleClass('active');  // 將 '.qa-item' 切換為 active 樣式，若已有 active 樣式則刪除此樣式
+  $(this).find('.collapse-content p').toggleClass('show'); // 尋找 '.collapse-content p' 切換 'show' 樣式，若已經有此樣式則刪除樣式
+});
+
+
+/* Navbar */
+$(".header-btn").click(function (e) {
+  $(".header-collapse").toggleClass("show");
+});
+
+/* scrollToTop */
+$(document).ready(function () {
+  $("#scrollToTop").click(function (e) {
+    $("html,body").animate({ scrollTop: 0 }, 1000);
+  });
+});

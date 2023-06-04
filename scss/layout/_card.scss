@@ -1,0 +1,210 @@
+
+
+
+.tools {
+  &-h2 {
+
+    @include pad {
+      font-size: 50px;
+      margin-bottom: 50px;
+    }
+
+    @include mobile {
+      font-size: 35px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &-input-icon {
+    position: relative;
+    width: 100%;
+
+    .icon {
+      position: absolute;
+      left: 43px;
+      top: calc(100% - 65px);
+      color: $color-4rd;
+    }
+
+    .search {
+      width: 100%;
+      border: 1px solid $color-3rd;
+      background: $color-3rd;
+      color: $color-4rd;
+    }
+  }
+
+  &-search {
+
+    @include pad {
+      flex-direction: column;
+      position: relative;
+    }
+
+    @include mobile {
+      margin-bottom: 12px;
+    }
+
+    &-btn-filter {
+      position: relative;
+
+      @include pad {
+        margin-bottom: 12px;
+      }
+    }
+
+
+    &-btn-dropdown {
+      position: relative;
+
+      @include pad {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+      }
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      right: 10px;
+      display: none;
+      margin-top: 4px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      padding: 20px 0;
+      border-radius: 16px;
+      background-color: $color-3rd;
+
+      &.show {
+        display: block;
+      }
+
+      a {
+        padding: 4px 40px;
+        color: $color-1st;
+
+        &:hover {
+          background-color: $color-4rd;
+        }
+      }
+    }
+
+    &-list {
+      padding: 8px 16px;
+      overflow-x: auto; //新增滾動軸
+
+      @include pad {
+        width: 90%;
+      }
+
+      @include mobile {
+        width: 100%;
+      }
+
+      li {
+        padding: 8px 16px;
+        display: flex;
+        align-items: center;
+
+        @include pad {
+          white-space: nowrap; //文字不換行
+        }
+
+        a {
+          color: $color-4rd;
+
+          &:hover {
+            color: $color-1st;
+            font-weight: 700;
+          }
+        }
+      }
+
+      .one-black {
+        background: $color-3rd;
+
+        a {
+          color: $color-1st;
+        }
+      }
+    }
+  }
+}
+
+.list {
+  flex-wrap: wrap;
+
+  @include pad {
+    justify-content: space-evenly;
+  }
+
+}
+
+.card {
+  width: 31%;
+  border: 1px solid $color-3rd;
+  flex-direction: column;
+
+  @include pc {
+    width: 33%;
+  }
+
+  @include pad {
+    width: 40%;
+    margin-bottom: 12px;
+  }
+
+  @include mobile {
+    width: 85%;
+    margin-bottom: 12px;
+  }
+
+  .img {
+    border-radius: 16px 16px 0 0;
+    overflow: hidden;
+    @include mobile {
+      img{
+        width: 100%;
+      }  
+      }
+    img:hover {
+      transform: scale(1.2); //圖片放大效果
+      transition: 0.5s; //圖片放大秒數
+    }
+  }
+
+  .list-title {
+    flex-grow: 1; //防止文字段落不一樣跑行
+
+  }
+
+  .list-ai,
+  .list-text {
+    border-top: 1px solid $color-3rd;
+  }
+}
+
+.pagination {
+  justify-content: flex-end;
+
+  @include mobile {
+    justify-content: center;
+  }
+
+  li {
+    a {
+      color: $color-1st;
+
+      &:hover {
+        color: $color-4rd;
+      }
+    }
+  }
+
+  .one-black {
+    background: $color-1st;
+
+    a {
+      color: $color-5rd;
+    }
+  }
+}
