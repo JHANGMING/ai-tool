@@ -39,11 +39,7 @@
 }
 
 .footer {
-
-  @include mobile {
-    flex-direction: column;
-    position: relative;
-  }
+  flex-wrap: wrap;
 
   &-copyright {
     color: $color-5rd;
@@ -51,6 +47,7 @@
 
     @include mobile {
       margin-bottom: 24px;
+      order: 1;
     }
   }
 
@@ -62,32 +59,26 @@
         color: $color-4rd;
       }
     }
+    @include mobile {
+      width: 100%;
+      order: 3;
+    }
 
   }
 
   &-top {
     color: $color-5rd;
     flex-grow: 0;
-    position: relative;
-    background: $color-6rd;
-    align-items: center;
-    border: 2px solid $color-6rd;
+    background: $color-1st;
+    border: 2px solid $color-1st;
     font-size: 16px;
     cursor: pointer;
     &:hover {
       color: $color-4rd;
     }
 
-    .arrow-up {
-      position: absolute;
-      right: 0px;
-      top: calc(50%);
-    }
-
     @include mobile {
-      position: absolute;
-      right: 0px;
-      top: 32px;
+      order: 2;
     }
   }
 }

@@ -44,21 +44,34 @@
   &-collapse{
     display: none;
     /* 在電腦版時不顯示 */
-    position: absolute;
-    top: 100%;
+    z-index: 10;
     width: 100%;
-    height: calc(100vh - 100px);
-    /* 佔滿整個瀏覽器高度扣掉 navbar 高度 */
-    background-color: #000000;
-    border-top: 1px solid #ffffff;
-    
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color:$color-1st;
   }
   @include pad {
     .header-collapse.show {
       display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: fixed;
+    }
+    
+    .header{
+      border-bottom: 2px solid $color-5rd;
+    }
+
+    .ham-link{
       align-items: center;
       justify-content: center;
     }
+    
+    .footer{
+      border-top: 1px solid #ffffff;
+      width: 100%;
+    }    
   }
   
 }

@@ -41,6 +41,17 @@ $(".dropdown-btn").click(function (e) {
   $(".dropdown-menu").toggleClass("show");
 });
 
+
+/* 篩選選單 */
+$(".filter").click(function (e) {
+  $(".all-model").toggleClass("show");
+});
+
+/* check */
+$('.model').click(function (e) {
+  $(this).find(".check").toggleClass("show");
+});
+
 /*  切換按鈕文字  */
 $(".new-to-old").click(function (e) {
   e.preventDefault();

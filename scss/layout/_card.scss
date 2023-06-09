@@ -1,6 +1,3 @@
-
-
-
 .tools {
   &-h2 {
 
@@ -35,11 +32,7 @@
   }
 
   &-search {
-
-    @include pad {
-      flex-direction: column;
-      position: relative;
-    }
+    flex-wrap: wrap;
 
     @include mobile {
       margin-bottom: 12px;
@@ -47,20 +40,51 @@
 
     &-btn-filter {
       position: relative;
-
       @include pad {
         margin-bottom: 12px;
+        order: 1;
       }
     }
 
 
     &-btn-dropdown {
       position: relative;
-
       @include pad {
-        position: absolute;
-        right: 0px;
-        top: 0px;
+        order: 2;
+      }
+    }
+
+    .all-model{
+      position: absolute;
+      left: 10px;
+      display: none;
+      margin-top: 4px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+      padding: 20px 32px 20px 40px;
+      border-radius: 16px;
+      background-color: $color-5rd;
+      z-index: 1;
+      width: 240px;
+      &.show {
+        display: block;
+      
+      }
+    .all-model-title{
+      color: $color-4rd;
+    }  
+    }
+    .filter-ai-model{
+      border-bottom: 1px solid $color-3rd;
+    }
+    .model{
+      &:hover {
+          background-color: $color-3rd;
+        }
+    }
+    .check{
+      display: none;
+      &.show {
+        display: block;
       }
     }
 
@@ -69,11 +93,11 @@
       right: 10px;
       display: none;
       margin-top: 4px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
       padding: 20px 0;
       border-radius: 16px;
-      background-color: $color-3rd;
-
+      background-color: $color-5rd;
+      z-index: 1;
       &.show {
         display: block;
       }
@@ -81,9 +105,8 @@
       a {
         padding: 4px 40px;
         color: $color-1st;
-
         &:hover {
-          background-color: $color-4rd;
+          background-color: $color-3rd;
         }
       }
     }
@@ -94,6 +117,7 @@
 
       @include pad {
         width: 90%;
+        order: 3;
       }
 
       @include mobile {
@@ -136,12 +160,13 @@
   @include pad {
     justify-content: space-evenly;
   }
-
+  @include mobile {
+    margin-bottom: 32px;
+  }
 }
 
 .card {
   width: 31%;
-  border: 1px solid $color-3rd;
   flex-direction: column;
 
   @include pc {
@@ -161,11 +186,13 @@
   .img {
     border-radius: 16px 16px 0 0;
     overflow: hidden;
+
     @include mobile {
-      img{
+      img {
         width: 100%;
-      }  
       }
+    }
+
     img:hover {
       transform: scale(1.2); //圖片放大效果
       transition: 0.5s; //圖片放大秒數
@@ -185,10 +212,6 @@
 
 .pagination {
   justify-content: flex-end;
-
-  @include mobile {
-    justify-content: center;
-  }
 
   li {
     a {

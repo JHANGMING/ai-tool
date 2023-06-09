@@ -16,22 +16,42 @@
 
 <body>
   <!--header-->
-  <header class="header container d-flex-jfsp py-sm mb-xl">
-    <div class="header-logo">
-      <h1 class="d-flex"><a href="index.html"></a>AI 工具王</h1>
-    </div>
-    <button type="button" class="header-btn">
-      <span class="material-icons">menu</span>
-    </button>
-    <ul class="header-meau d-flex fw-700">
-      <li class="mr-lg"><a href="index.html">首頁</a></li>
-      <li><a href="Pricing.html">定價</a></li>
-    </ul>
-    <div class="header-collapse">
-      <ul>
-        <li><a href="index.html" class="font-xl fw-700">首頁</a></li>
-        <li><a href="Pricing.html" class="font-xl fw-700">定價</a></li>
+  <header class="Pricing-header container">
+    <div class="header d-flex-jfsp py-sm mb-xl">
+      <div class="header-logo">
+        <h1 class="d-flex"><a href="index.html"></a>AI 工具王</h1>
+      </div>
+      <button type="button" class="header-btn">
+        <span class="material-icons">menu</span>
+      </button>
+      <ul class="header-meau d-flex fw-700">
+        <li class="mr-lg"><a href="index.html">首頁</a></li>
+        <li><a href="Pricing.html">定價</a></li>
       </ul>
+      <div class="header-collapse px-xxs">
+        <div class="header d-flex-jfsp px-xxs py-sm mb-xl">
+          <div class="header-logo">
+            <h1 class="d-flex"><a href="index.html"></a>AI 工具王</h1>
+          </div>
+          <button type="button" class="header-btn">
+            <span class="close material-icons">close</span>
+          </button>
+        </div>
+        <ul class="ham-link d-column">
+          <li><a href="index.html" class="font-xl fw-700">首頁</a></li>
+          <li><a href="Pricing.html" class="font-xl fw-700">定價</a></li>
+        </ul>
+        <div class="footer d-flex py-md">
+          <div class="footer-copyright fw-700">
+            <p>AI工具王 © 2023</p>
+          </div>
+          <ul class="footer-social d-flex fw-700">
+            <li class="pr-sm"><a href="#Facebook">Facebook</a></li>
+            <li class="pr-sm"><a href="#Twitter">Twitter</a></li>
+            <li><a href="#Instagram">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </header>
   <!--main-->
@@ -59,7 +79,7 @@
         </div>
         <div class="Pricing-num d-flex-jfsp pt-sm px-sm">
           <p class="fw-900 font-sm color-w">NT$5<span class="fw-400 color-gray">／1k tokens</span></p>
-          <a href="#" class="Pricing-start d-flex">
+          <a href="#start" class="Pricing-start d-flex">
             <p class="fw-700 mr-md">開始使用</p>
             <span class="material-icons">call_made</span>
           </a>
@@ -74,7 +94,7 @@
         </div>
         <div class="Pricing-num d-flex-jfsp pt-sm px-sm">
           <p class="fw-900 font-sm color-w">NT$5<span class="fw-400 color-gray">／1k tokens</span></p>
-          <a href="#" class="Pricing-start d-flex">
+          <a href="#Pricing-start" class="Pricing-start d-flex">
             <p class="fw-700 mr-md">開始使用</p>
             <span class="material-icons">call_made</span>
           </a>
@@ -89,7 +109,7 @@
         </div>
         <div class="Pricing-num d-flex-jfsp pt-sm px-sm">
           <p class="fw-900 font-sm color-w">NT$5<span class="fw-400 color-gray">／1k tokens</span></p>
-          <a href="#" class="Pricing-start d-flex">
+          <a href="#Pricing-start2" class="Pricing-start d-flex">
             <p class="fw-700 mr-md">開始使用</p>
             <span class="material-icons">call_made</span>
           </a>
@@ -105,7 +125,7 @@
         </div>
         <div class="Pricing-num d-flex-jfsp pt-sm px-sm">
           <p class="fw-900 font-sm color-w">NT$5<span class="fw-400 color-gray">／1k tokens</span></p>
-          <a href="#" class="Pricing-start d-flex">
+          <a href="#Pricing-start3" class="Pricing-start d-flex">
             <p class="fw-700 mr-md">開始使用</p>
             <span class="material-icons">call_made</span>
           </a>
@@ -138,20 +158,65 @@
         <h2 class="tools-h2 title-font-900 font-xl font-tac mb-3xl">這些超酷的應用，都來自AI工具王</h2>
         <div class="tools-input-icon">
           <span class="material-icons icon">search</span>
-          <input type="text" placeholder="輸入關鍵字搜尋" class="search mb-lg br-sm px-xl py-sm">
+          <input type="text" placeholder="輸入關鍵字搜尋" class="search font-xs mb-lg br-sm px-xl py-sm">
         </div>
         <div class="tools-search d-flex-jfsp mb-xl">          
           <div class="tools-search-btn-filter">
-            <button type="button" class="btn btn-font">篩選 <span class="material-icons btn-icons">filter_alt</span></button>
+            <button type="button" class="filter btn btn-font mouse-h">篩選 <span
+                class="material-icons btn-icons">filter_alt</span></button>
+            <div class="all-model">
+              <ul class="filter-ai-model d-column">
+                <li class="all-model-title font-xxs fw-700 mb-xxs">AI模型</li>
+                <li class="model d-flex-jfsp mb-xxs mouse-h">所有模型<span class="check material-icons">
+                    check
+                  </span></li>
+                <li class="model d-flex-jfsp mb-xxs mouse-h">卡卡<span class="check material-icons">
+                    check
+                  </span></li>
+                <li class="model d-flex-jfsp mb-xxs mouse-h">杰杰<span class="check material-icons">
+                    check
+                  </span></li>
+                <li class="model d-flex-jfsp mb-xxs mouse-h">琪琪<span class="check material-icons">
+                    check
+                  </span></li>
+                <li class="model d-flex-jfsp pb-xs mouse-h">昊昊<span class="check material-icons">
+                    check
+                  </span></li>
+              </ul>
+              <ul class="filter-type-model d-column">
+                <li class="all-model-title font-xxs fw-700 mb-xxs pt-xs">類型</li>
+                <li class="model d-flex-jfsp mb-xxs mouse-h">所有類型<span class="check material-icons">
+                    check
+                  </span></li>
+                <li class="model d-flex-jfsp mb-xxs mouse-h">篩選項目1<span class="check material-icons">
+                    check
+                  </span></li>
+                <li class="model d-flex-jfsp mb-xxs mouse-h">篩選項目2<span class="check material-icons">
+                    check
+                  </span></li>
+                <li class="model d-flex-jfsp mb-xxs mouse-h">篩選項目3<span class="check material-icons">
+                    check
+                  </span></li>
+                <li class="model d-flex-jfsp mb-xxs mouse-h">篩選項目4<span class="check material-icons">
+                    check
+                  </span></li>
+                <li class="model d-flex-jfsp mb-xxs mouse-h">篩選項目5<span class="check material-icons">
+                    check
+                  </span></li>
+                <li class="model d-flex-jfsp mb-xxs mouse-h">篩選項目6<span class="check material-icons">
+                    check
+                  </span></li>
+              </ul>
+            </div>
           </div>
           <ul class="tools-search-list d-flex">
             <li class="one-black fw-700 br-sm"><a href="#">全部</a></li>
-            <li><a href="#">聊天</a></li>
-            <li><a href="#">影像辨識</a></li>
-            <li><a href="#">翻譯</a></li>
-            <li><a href="#">行銷</a></li>
-            <li><a href="#">客服</a></li>
-            <li><a href="#">生產力</a></li>
+            <li><a href="#">問答服務</a></li>
+            <li><a href="#">虛擬客服</a></li>
+            <li><a href="#">生活應用</a></li>
+            <li><a href="#">程式知識</a></li>
+            <li><a href="#">翻譯助手</a></li>
+            <li><a href="#">行銷文案</a></li>
           </ul>
           <div class="tools-search-btn-dropdown">
             <button type="button" class="dropdown-btn btn btn-font">
@@ -172,7 +237,7 @@
         </div>
       </div>
       <ul class="list d-flex-jfsp">
-        <li class="card d-column mb-lg br-sm">
+        <!-- <li class="card d-column mb-lg br-sm">
           <div class="img">
             <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/tool1.png"
               alt="Chatbot Builder">
@@ -291,7 +356,7 @@
               <span class="material-icons card-icon">share</span>
             </a>
           </div>
-        </li>
+        </li> -->
       </ul>
       <ul class="pagination d-flex fw-700 font-xs">
         <li class="one-black px-xs py-xs mr-xs br-sm"><a href="#" class="color-1st">1</a></li>
@@ -304,101 +369,108 @@
     </div>
   </section>
 
-  <section class="question container d-flex-jfsp">
-    <h3 class="question-title font-md title-font-900 color-w mt-lg">常見問題</h3>
-    <ul class="question-list mt-lg mb-5xl">
-      <li class="mb-ms">
-        <a href="#1" class="question-item px-lg py-sm br-sm d-block">
-          <div class=" font-sm">
-            <div class="collapse-state d-flex-align-c">
-              <span class="material-icons add-icon mr-xl">
-                add
-              </span>
-              <span class="material-icons remove-icon mr-xl">
-                remove
-              </span>
-              <h3>如何選擇適合的AI模型？</h3>
+  <section class="con-question container">
+    <div class="question d-flex-jfsp">
+      <h3 class="question-title font-md title-font-900 color-w mt-lg">常見問題</h3>
+      <ul class="question-list mt-lg mb-5xl">
+        <li class="mb-ms">
+          <a href="#question-item" class="question-item px-lg py-sm br-sm d-block">
+            <div class=" font-sm">
+              <div class="collapse-state d-flex-align-c">
+                <span class="material-icons add-icon mr-xl">
+                  add
+                </span>
+                <span class="material-icons remove-icon mr-xl">
+                  remove
+                </span>
+                <h3>如何選擇適合的AI模型？</h3>
+              </div>
+              <div class="collapse-content">
+                <p class="d-none mt-xs ml-md">選擇適合的 AI
+                  模型需要考慮您的應用場景、需要解決的問題、可用的資源以及預算等因素。可以通過對比不同模型的性能、準確率、速度等指標，以及與其他用戶的評價與反饋，來選擇最適合的模型。</p>
+              </div>
             </div>
-            <div class="collapse-content"> 
-              <p class="d-none mt-xs ml-md">選擇適合的 AI 模型需要考慮您的應用場景、需要解決的問題、可用的資源以及預算等因素。可以通過對比不同模型的性能、準確率、速度等指標，以及與其他用戶的評價與反饋，來選擇最適合的模型。</p>
+          </a>
+        </li>
+        <li class="mb-ms">
+          <a href="#question-item2" class="question-item px-lg py-sm br-sm d-block">
+            <div class="font-sm">
+              <div class="collapse-state mr-xl d-flex-align-c">
+                <span class="material-icons add-icon mr-xl">
+                  add
+                </span>
+                <span class="material-icons remove-icon mr-xl">
+                  remove
+                </span>
+                <h3>租用模型的費用是如何計算的？</h3>
+              </div>
+              <div class="collapse-content">
+                <p class="d-none mt-xs ml-md">
+                  租用模型的費用通常會根據模型的性能和使用時間等因素進行計算。具體而言，模型的性能可以根據其精度、速度、暫用資源等指標來評估；而使用時間可以根據租用時間的長短來計算，通常會按小時、天或月來計算。綜合考慮這些因素，系統會自動算出對應的租用費用。
+                </p>
+              </div>
             </div>
-          </div>
-        </a>
-      </li>
-      <li class="mb-ms">
-        <a href="#2" class="question-item px-lg py-sm br-sm d-block">
-          <div class="font-sm">
-            <div class="collapse-state mr-xl d-flex-align-c">
-              <span class="material-icons add-icon mr-xl">
-                add
-              </span>
-              <span class="material-icons remove-icon mr-xl">
-                remove
-              </span>
-              <h3>租用模型的費用是如何計算的？</h3>
+          </a>
+        </li>
+        <li class="mb-ms">
+          <a href="#question-item3" class="question-item px-lg py-sm br-sm d-block">
+            <div class="font-sm">
+              <div class="collapse-state mr-xl d-flex-align-c">
+                <span class="material-icons add-icon mr-xl">
+                  add
+                </span>
+                <span class="material-icons remove-icon mr-xl">
+                  remove
+                </span>
+                <h3>如何進行付款？</h3>
+              </div>
+              <div class="collapse-content">
+                <p class="d-none mt-xs ml-md">
+                  付款方式可以通過網站上提供的宴上支付平台進行支付。具體而言，您可以選擇信用卡、銀行轉帳電子錢包等不同的支付方式進行支付。在支付前，您需要先登錄網站並選擇適合的租用方案，系統會自動計算出對應的租用欸用和支付金額，然後您可以選擇適合的支付方式進行支付。完成支付後，系統會自動向您提供相應的服務。
+                </p>
+              </div>
             </div>
-            <div class="collapse-content">
-              <p class="d-none mt-xs ml-md">租用模型的費用通常會根據模型的性能和使用時間等因素進行計算。具體而言，模型的性能可以根據其精度、速度、暫用資源等指標來評估；而使用時間可以根據租用時間的長短來計算，通常會按小時、天或月來計算。綜合考慮這些因素，系統會自動算出對應的租用費用。</p>
+          </a>
+        </li>
+        <li class="mb-ms">
+          <a href="#question-item4" class="question-item px-lg py-sm br-sm d-block">
+            <div class="font-sm">
+              <div class="collapse-state mr-xl d-flex-align-c">
+                <span class="material-icons add-icon mr-xl">
+                  add
+                </span>
+                <span class="material-icons remove-icon mr-xl">
+                  remove
+                </span>
+                <h3>租用模型的期限是多久？</h3>
+              </div>
+              <div class="collapse-content">
+                <p class="d-none mt-xs ml-md">租用模型的期限可以根據您的需求進行設置，通常可以選擇幾個小時、幾天或幾個月等不同的時間段。</p>
+              </div>
             </div>
-          </div>
-        </a>
-      </li>
-      <li class="mb-ms">
-        <a href="#3" class="question-item px-lg py-sm br-sm d-block">
-          <div class="font-sm">
-            <div class="collapse-state mr-xl d-flex-align-c">
-              <span class="material-icons add-icon mr-xl">
-                add
-              </span>
-              <span class="material-icons remove-icon mr-xl">
-                remove
-              </span>
-              <h3>如何進行付款？</h3>
+          </a>
+        </li>
+        <li class="mb-ms">
+          <a href="#question-item5" class="question-item px-lg py-sm br-sm d-block">
+            <div class="font-sm">
+              <div class="collapse-state mr-xl d-flex-align-c">
+                <span class="material-icons add-icon mr-xl">
+                  add
+                </span>
+                <span class="material-icons remove-icon mr-xl">
+                  remove
+                </span>
+                <h3>如果在使用過程中遇到問題，應該怎麼處理？</h3>
+              </div>
+              <div class="collapse-content">
+                <p class="d-none mt-xs ml-md">如果在使用過程中遇到問題，您可以聯繫惡扶或技術支持人員進行諮詢或報告問題。您也可以。您也可以通過網站上的幫助中心或社區論壇尋找相關的解決方案和回答。</p>
+              </div>
             </div>
-            <div class="collapse-content">
-              <p class="d-none mt-xs ml-md">付款方式可以通過網站上提供的宴上支付平台進行支付。具體而言，您可以選擇信用卡、銀行轉帳電子錢包等不同的支付方式進行支付。在支付前，您需要先登錄網站並選擇適合的租用方案，系統會自動計算出對應的租用欸用和支付金額，然後您可以選擇適合的支付方式進行支付。完成支付後，系統會自動向您提供相應的服務。</p>
-            </div>
-          </div>
-        </a>
-      </li>
-      <li class="mb-ms">
-        <a href="#4" class="question-item px-lg py-sm br-sm d-block">
-          <div class="font-sm">
-            <div class="collapse-state mr-xl d-flex-align-c">
-              <span class="material-icons add-icon mr-xl">
-                add
-              </span>
-              <span class="material-icons remove-icon mr-xl">
-                remove
-              </span>
-              <h3>租用模型的期限是多久？</h3>
-            </div>
-            <div class="collapse-content">
-              <p class="d-none mt-xs ml-md">租用模型的期限可以根據您的需求進行設置，通常可以選擇幾個小時、幾天或幾個月等不同的時間段。</p>
-            </div>
-          </div>
-        </a>
-      </li>
-      <li class="mb-ms">
-        <a href="#5" class="question-item px-lg py-sm br-sm d-block">
-          <div class="font-sm">
-            <div class="collapse-state mr-xl d-flex-align-c">
-              <span class="material-icons add-icon mr-xl">
-                add
-              </span>
-              <span class="material-icons remove-icon mr-xl">
-                remove
-              </span>
-              <h3>如果在使用過程中遇到問題，應該怎麼處理？</h3>
-            </div>
-            <div class="collapse-content">
-              <p class="d-none mt-xs ml-md">如果在使用過程中遇到問題，您可以聯繫惡扶或技術支持人員進行諮詢或報告問題。您也可以。您也可以通過網站上的幫助中心或社區論壇尋找相關的解決方案和回答。</p>
-            </div>
-          </div>
-        </a>
-      </li>
-    </ul>
-    </a>
+          </a>
+        </li>
+      </ul>
+    </div>
+    
   </section>
   <!--footer-->
   <footer class="footer-address container">
@@ -409,16 +481,16 @@
           <li><a href="Pricing.html">定價</a></li>
         </ul>
       </div>
-      <div class="sitemap-log"><a href="/ai-tool/index.html"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/logo.png" alt="logo"></a></div>
+      <div class="sitemap-log"><a href="index.html"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/logo.png" alt="logo"></a></div>
     </div>
     <div class="footer d-flex-jfsp py-md">
       <div class="footer-copyright fw-700">
         <p>AI工具王 © 2023</p>
       </div>
       <ul class="footer-social d-flex fw-700">
-        <li class="pr-sm"><a href="#">Facebook</a></li>
-        <li class="pr-sm"><a href="#">Twitter</a></li>
-        <li><a href="#">Instagram</a></li>
+        <li class="pr-sm"><a href="#Facebook">Facebook</a></li>
+        <li class="pr-sm"><a href="#Twitter">Twitter</a></li>
+        <li><a href="#Instagram">Instagram</a></li>
       </ul>
       <button type="button" class="footer-top d-flex fw-700" id="scrollToTop">
         <p class="mr-md">Back to top</p>
@@ -429,7 +501,9 @@
   <script src="https://unpkg.com/swiper@9.3.2/swiper-bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"
     integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
   <script src="js/ai-tools.js"></script>
+  <script src="js/axios.js"></script>
 </body>
 
 </html>

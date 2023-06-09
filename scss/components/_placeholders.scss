@@ -15,6 +15,9 @@
 
 //font-size
 .font {
+  &-xxs {
+      font-size: 12px;
+    }
   &-xs { 
     font-size: 16px;
   }
@@ -158,12 +161,18 @@
 }
 
 .pt{
+  &-xs {
+    padding-top: 16px;
+  }
   &-sm {
     padding-top: 20px;
   }
 }
 
 .pb {
+  &-xs {
+      padding-bottom: 16px;
+    }
   &-md {
     padding-bottom: 40px;
   }
@@ -175,10 +184,18 @@
     margin-top: 12px;
     margin-bottom: 24px;
   }
+  &-xl {
+    margin-top: 160px;
+    margin-bottom: 160px;
+  }
 }
 
 //padding X軸
 .px {
+  &-xxs {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
   &-xs {
     padding-left: 20px;
     padding-right: 20px;
@@ -280,3 +297,7 @@
 .d-block {
   display: block;
 }
+
+.mouse-h{
+  cursor: pointer;
+} 

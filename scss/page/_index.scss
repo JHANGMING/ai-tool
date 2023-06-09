@@ -18,7 +18,7 @@
 
     &:hover {
       background: $color-5rd;
-      color: $color-6rd;
+      color: $color-1st;
     }
   }
 
@@ -149,8 +149,12 @@
       width: 196px;
       height: 40px;
       background-image: $background-linear;
+      // background-color: #fff;
       position: absolute;
       left: 0;
+      @include pad {
+        width: 80px;
+      }
     }
 
     & ::after {
@@ -161,6 +165,9 @@
       transform: rotate(-180deg);
       position: absolute;
       right: 0px;
+      @include pad {
+        width: 80px;
+      }
     }
   }
 
@@ -223,15 +230,6 @@
 .callToAction {
   align-items: center;
   border-bottom: 2px solid $color-4rd;
-
-  @include pad {
-    padding: 60px 100px;
-  }
-
-  @include mobile {
-    padding: 60px 80px;
-  }
-
   &-h2 {
     color: $color-5rd;
 
@@ -241,15 +239,16 @@
 
     @include mobile {
       font-size: 32px;
+      margin-bottom: 32px;
     }
   }
 
   &-start {
     position: relative;
-
+    
     &:hover {
       background: $color-5rd;
-      color: $color-6rd;
+      color: $color-1st;
     }
 
     .arrow {

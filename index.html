@@ -16,28 +16,48 @@
 
 <body>
   <!--header-->
-  <header class="header container d-flex-jfsp py-sm mb-xl">
-    <div class="header-logo">
-      <h1 class="d-flex"><a href="index.html"></a>AI 工具王</h1>
-    </div>
-    <button type="button" class="header-btn">
-      <span class="material-icons">menu</span>
-    </button>
-    <ul class="header-meau d-flex fw-700">
-      <li class="mr-lg"><a href="index.html">首頁</a></li>
-      <li><a href="Pricing.html">定價</a></li>
-    </ul>
-    <div class="header-collapse">
-      <ul>
-        <li><a href="index.html" class="font-xl fw-700">首頁</a></li>
-        <li><a href="Pricing.html" class="font-xl fw-700">定價</a></li>
+  <header class="index-header container">
+    <div class="header d-flex-jfsp py-sm mb-xl">
+      <div class="header-logo">
+        <h1 class="d-flex"><a href="index.html"></a>AI 工具王</h1>
+      </div>
+      <button type="button" class="header-btn">
+        <span class="material-icons">menu</span>
+      </button>
+      <ul class="header-meau d-flex fw-700">
+        <li class="mr-lg"><a href="index.html">首頁</a></li>
+        <li><a href="Pricing.html">定價</a></li>
       </ul>
+      <div class="header-collapse px-xxs">
+        <div class="header d-flex-jfsp px-xxs py-sm mb-xl">
+          <div class="header-logo">
+            <h1 class="d-flex"><a href="index.html"></a>AI 工具王</h1>
+          </div>
+          <button type="button" class="header-btn">
+            <span class="close material-icons">close</span>
+          </button>
+        </div>
+        <ul class="ham-link d-column">
+          <li><a href="index.html" class="font-xl fw-700">首頁</a></li>
+          <li><a href="Pricing.html" class="font-xl fw-700">定價</a></li>
+        </ul>
+        <div class="footer d-flex py-md">
+          <div class="footer-copyright fw-700">
+            <p>AI工具王 © 2023</p>
+          </div>
+          <ul class="footer-social d-flex fw-700">
+            <li class="pr-sm"><a href="#Facebook">Facebook</a></li>
+            <li class="pr-sm"><a href="#Twitter">Twitter</a></li>
+            <li><a href="#Instagram">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </header>
   <!--main-->
   <section class="banner container">
     <h2 class="banner-h2 title-font-900 font-xxl color-w">透過<br>AI 工具王的<br>強大模型<br>讓您的業務更聰明</h2>
-    <a href="#" class="banner-start btn-start font-sm title-font-900 mt-sm mb-4xl py-sm">開始使用</a>
+    <a href="#banner-start" class="banner-start btn-start font-sm title-font-900 mt-sm mb-4xl py-sm">開始使用</a>
     <div class="banner-animation mb-5xl">
       <img class="deco-img-1" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/deco.png" alt="deco">
       <img class="deco-img-2" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/deco.png" alt="deco">
@@ -48,8 +68,7 @@
     <div class="service-title d-flex-jfsp">
       <h2 class="service-title-h2 title-font-900 font-md color-w ">我們的服務</h2>
       <h3 class="service-title-h3 title-font-900 font-lg color-w">
-        <p>我們相信透過 AI 技術，</p>
-        <p>包括圖像識別、自然語言處理和機器翻譯等，讓您更快、更準確地做出決策。</p>
+        <p>我們相信透過 AI 技術，包括圖像識別、自然語言處理和機器翻譯等，讓您更快、更準確地做出決策。</p>
       </h3>
     </div>
     <ul class="service-list d-flex mt-md">
@@ -164,24 +183,68 @@
         <h2 class="tools-h2 title-font-900 font-xl font-tac mb-3xl">這些超酷的應用，都來自AI工具王</h2>
         <div class="tools-input-icon">
           <span class="material-icons icon">search</span>
-          <input type="text" placeholder="輸入關鍵字搜尋" class="search mb-lg br-sm px-xl py-sm">
+          <input type="text" placeholder="輸入關鍵字搜尋" class="search font-xs mb-lg br-sm px-xl py-sm">
         </div>
         <div class="tools-search d-flex-jfsp mb-xl">
           <div class="tools-search-btn-filter">
-            <button type="button" class="btn btn-font">篩選 <span
+            <button type="button" class="filter btn btn-font mouse-h">篩選 <span
                 class="material-icons btn-icons">filter_alt</span></button>
+            <div class="all-model">
+              <ul class="filter-ai-model d-column">
+                <li class="all-model-title font-xxs fw-700 mb-xxs">AI模型</li>
+                <li class="model d-flex-jfsp mb-xxs mouse-h">所有模型<span class="check material-icons">
+                    check
+                  </span></li>
+                <li class="model d-flex-jfsp mb-xxs mouse-h">卡卡<span class="check material-icons">
+                    check
+                  </span></li>
+                <li class="model d-flex-jfsp mb-xxs mouse-h">杰杰<span class="check material-icons">
+                    check
+                  </span></li>
+                <li class="model d-flex-jfsp mb-xxs mouse-h">琪琪<span class="check material-icons">
+                    check
+                  </span></li>
+                <li class="model d-flex-jfsp pb-xs mouse-h">昊昊<span class="check material-icons">
+                    check
+                  </span></li>
+              </ul>
+              <ul class="filter-type-model d-column">
+                <li class="all-model-title font-xxs fw-700 mb-xxs pt-xs">類型</li>
+                <li class="model d-flex-jfsp mb-xxs mouse-h">所有類型<span class="check material-icons">
+                    check
+                  </span></li>
+                <li class="model d-flex-jfsp mb-xxs mouse-h">篩選項目1<span class="check material-icons">
+                    check
+                  </span></li>
+                <li class="model d-flex-jfsp mb-xxs mouse-h">篩選項目2<span class="check material-icons">
+                    check
+                  </span></li>
+                <li class="model d-flex-jfsp mb-xxs mouse-h">篩選項目3<span class="check material-icons">
+                    check
+                  </span></li>
+                <li class="model d-flex-jfsp mb-xxs mouse-h">篩選項目4<span class="check material-icons">
+                    check
+                  </span></li>
+                <li class="model d-flex-jfsp mb-xxs mouse-h">篩選項目5<span class="check material-icons">
+                    check
+                  </span></li>
+                <li class="model d-flex-jfsp mb-xxs mouse-h">篩選項目6<span class="check material-icons">
+                    check
+                  </span></li>
+              </ul>
+            </div>
           </div>
           <ul class="tools-search-list d-flex">
-            <li class="one-black fw-700 br-sm"><a href="#">全部</a></li>
-            <li><a href="#">聊天</a></li>
-            <li><a href="#">影像辨識</a></li>
-            <li><a href="#">翻譯</a></li>
-            <li><a href="#">行銷</a></li>
-            <li><a href="#">客服</a></li>
-            <li><a href="#">生產力</a></li>
+            <li class="one-black fw-700 br-sm"><a href="#全部">全部</a></li>
+            <li><a href="#問答服務">問答服務</a></li>
+            <li><a href="#虛擬客服">虛擬客服</a></li>
+            <li><a href="#生活應用">生活應用</a></li>
+            <li><a href="#程式知識">程式知識</a></li>
+            <li><a href="#翻譯助手">翻譯助手</a></li>
+            <li><a href="#行銷文案">行銷文案</a></li>
           </ul>
           <div class="tools-search-btn-dropdown">
-            <button type="button" class="dropdown-btn btn btn-font">
+            <button type="button" class="dropdown-btn btn btn-font mouse-h">
               <span class="dropdown-btnText">由新到舊</span>
               <span class="material-icons fs-normal btn-icons">
                 expand_more
@@ -198,8 +261,8 @@
           </div>
         </div>
       </div>
-      <ul class="list d-flex-jfsp">
-        <li class="card d-column mb-lg br-sm">
+      <ul class="list d-flex-jfsp mb-xl">
+        <!-- <li class="card d-column mb-lg br-sm">
           <div class="img">
             <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/tool1.png"
               alt="Chatbot Builder">
@@ -218,8 +281,8 @@
               <span class="material-icons card-icon">share</span>
             </a>
           </div>
-        </li>
-        <li class="card d-column mb-lg br-sm">
+        </li> -->
+        <!-- <li class="card d-column mb-lg br-sm">
           <div class="img"><img
               src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/tool2.png"
               alt="Image Recognition">
@@ -318,25 +381,27 @@
               <span class="material-icons card-icon">share</span>
             </a>
           </div>
-        </li>
+        </li> -->
       </ul>
       <ul class="pagination d-flex fw-700 font-xs">
-        <li class="one-black px-xs py-xs mr-xs br-sm"><a href="#" class="color-1st">1</a></li>
-        <li class="px-xs py-xs mr-xs"><a href="#">2</a></li>
-        <li class="px-xs py-xs mr-xs"><a href="#">3</a></li>
-        <li class="px-xs py-xs mr-xs"><a href="#">4</a></li>
-        <li class="px-xs py-xs mr-xs"><a href="#">5</a></li>
-        <li class="px-xs py-xs "><a href="#">></a></li>
+        <li class="one-black px-xs py-xs mr-xs br-sm"><a href="#1" class="color-1st">1</a></li>
+        <li class="px-xs py-xs mr-xs"><a href="#2">2</a></li>
+        <li class="px-xs py-xs mr-xs"><a href="#3">3</a></li>
+        <li class="px-xs py-xs mr-xs"><a href="#4">4</a></li>
+        <li class="px-xs py-xs mr-xs"><a href="#5">5</a></li>
+        <li class="px-xs py-xs "><a href="#6">></a></li>
       </ul>
     </div>
   </section>
 
-  <section class="callToAction container d-column py-xl">
-    <h2 class="callToAction-h2 font-lg title-font-900 font-tac mb-xxl">現在就來建立屬於你的服務吧</h2>
-    <a href="#" class="callToAction-start btn-start d-flex px-md py-sm">
-      <p class="font-sm title-font-900 mr-md">開始使用</p>
-      <span class="material-icons">call_made</span>
-    </a>
+  <section class="callToAction-service container ">
+    <div class="callToAction d-column py-xxl">
+      <h2 class="callToAction-h2 font-lg title-font-900 font-tac mb-xxl">現在就來建立屬於你的服務吧</h2>
+      <a href="#callToAction-start" class="callToAction-start btn-start d-flex px-md py-sm">
+        <p class="font-sm title-font-900 mr-md">開始使用</p>
+        <span class="material-icons">call_made</span>
+      </a>
+    </div>  
   </section>
   <!--footer-->
   <footer class="footer-address container">
@@ -347,16 +412,16 @@
           <li><a href="Pricing.html">定價</a></li>
         </ul>
       </div>
-      <div class="sitemap-log"><a href="/ai-tool/index.html"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/logo.png" alt="logo"></a></div>
+      <div class="sitemap-log"><a href="index.html"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/logo.png" alt="logo"></a></div>
     </div>
     <div class="footer d-flex-jfsp py-md">
       <div class="footer-copyright fw-700">
         <p>AI工具王 © 2023</p>
       </div>
       <ul class="footer-social d-flex fw-700">
-        <li class="pr-sm"><a href="#">Facebook</a></li>
-        <li class="pr-sm"><a href="#">Twitter</a></li>
-        <li><a href="#">Instagram</a></li>
+        <li class="pr-sm"><a href="#Facebook">Facebook</a></li>
+        <li class="pr-sm"><a href="#Twitter">Twitter</a></li>
+        <li><a href="#Instagram">Instagram</a></li>
       </ul>
       <button type="button" class="footer-top d-flex fw-700" id="scrollToTop">
         <p class="mr-md">Back to top</p>
@@ -367,7 +432,9 @@
   <script src="https://unpkg.com/swiper@9.3.2/swiper-bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"
     integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
   <script src="js/ai-tools.js"></script>
+  <script src="js/axios.js"></script>
 </body>
 
 </html>
