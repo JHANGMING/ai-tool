@@ -152,7 +152,8 @@ function modelMenu(){
     })
   )
 }
-  
+
+//塞選btn接API
 function filterbtnselect(item){
   console.log(filterMenu)
   if (filterMenu.length === 0){
@@ -160,7 +161,7 @@ function filterbtnselect(item){
   }else{
     for (let i = 0; i < filterMenu.length;i++){
       data.type=filterMenu[i];
-      getData(data);
+      // getData(data);
       // console.log(data.type)
     }
     // console.log(data.type)
