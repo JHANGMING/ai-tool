@@ -133,3 +133,29 @@
     top: 0px;
   }
 }
+
+/* 固定遮罩位置 */
+.mask::after,
+.mask::before {
+  content: "";
+  position: sticky;
+  /* 固定遮罩位置 */
+  width: 196px;
+  height: 40px;
+  top: 0;
+}
+
+
+.mask::before {
+  left: 0;
+  padding-right: 196px;
+  background: $background-linear;
+
+}
+
+.mask::after {
+  right: 0;
+  padding-left: 196px;
+  background: $background-linear;
+  transform: rotate(-180deg);
+}

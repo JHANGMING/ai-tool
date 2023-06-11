@@ -1,33 +1,43 @@
 const apiPath = 'https://2023-engineer-camp.zeabur.app';
 const list = document.querySelector('.list');
+const pagination = document.querySelector('.pagination');
+
+
 let worksData = []
 let pagesData = {}
 
 let data = {
   type: '',
   sort: 0,
-  page: 1,
+  page: "1",
   search: '',
 }
+
 
 function getData({ type, sort, page, search }) {
   const apiUrl = `${apiPath}/api/v1/works?sort=${sort}&page=${page}&${type ? `type=${type}&` : ''}${search ? `search=${search}` : ''}`
   axios.get(apiUrl)
     .then(function (res) {
       // console.log(res.data)
-      worksData = res.data.ai_works.data;
-      pagesData = res.data.ai_works.page;
-
-
-      rendercards()
+      worksData=res.data.ai_works.data;
+      pagesData = res.data.ai_works.page.total_pages;
+      if (worksData.length === 0) {
+        return alert(`您輸入或選擇的關鍵字，沒有符合條件的卡片`)
+      }
+      console.log(worksData);
+      // console.log(pagesData);
+      rendercards(worksData)
+      renderpaginator(pagesData)
+      getCategories()
     })
 }
 
 getData(data);
 
+
 // 作品選染至畫面
-function rendercards() {
-  let html=worksData.map((item) =>
+function rendercards(data) {
+  let html = data.map((item) =>
     `<li class="card card-br d-column mb-lg br-sm">
       <div class="img">
         <img src="${item.imageUrl}"alt="ai image">
@@ -49,7 +59,7 @@ function rendercards() {
     </li>
     `
   ).join("");
-  if (worksData.length == 2 || worksData.length == 5) {
+  if (data.length == 2 || data.length == 5) {
     html += `<li class="card d-column mb-lg br-sm"></li>`
   }
   list.innerHTML = html;
@@ -71,42 +81,121 @@ oldToNew.addEventListener('click', (e) => {
   getData(data);
 })
 
-// 搜尋
+// 關鍵字搜尋
 const search = document.querySelector('.search');
 search.addEventListener('keydown', (e) => {
+  const searchvalue = search.value.trim().toLowerCase();
   if (e.keyCode === 13) {
-    data.search = search.value
+    data.search = searchvalue
     data.page = 1
     getData(data);
+    if (searchvalue.length === 0) {
+      return alert(`您輸入的關鍵字為空白，請重新輸入`)
+    }
   }
 })
 
-// const filterMenu = document.querySelector(".filter-menu");
-// const filter = document.querySelector(".filter");
-// function getCategories() {
-//   let newworksData = worksData.map((item) => item.type);
-//   let sorted = newworksData.filter(
-//     (item, index) => newworksData.indexOf(item) === index
-//   );
-//   renderCategories(sorted);
-// }
-// function renderCategories(sorted) {
-//   let str = '<li class="mb-xxs"><a href="#全部">全部</a></li>';
-//   let html = sorted
-//     .map((item) => `<li class="mb-xxs"><a href="#${item}">${item}</a></li>`)
-//     .join("");
-//   filterMenu.innerHTML = str+html;
-// }
+//塞選btn
+const filterAIMenu = document.querySelector(".filter-ai-model");
+const filterTypeMenu = document.querySelector(".filter-type-model");
+const filter = document.querySelector(".filter");
+let filterMenu=[];
+function getCategories() {
+  let newAIData = worksData.map((item) => item.model);
+  let aisorted = newAIData.filter(
+    (item, index) => newAIData.indexOf(item) === index
+  );
+  renderCategories(aisorted);
+}
+function renderCategories(aisorted) {
+  let str = '<li class="all-model-title font-xxs fw-700 mb-xxs">AI模型</li><li class="model d-flex-jfsp mb-xxs mouse-h" ><div class="model-content">所有模型</div><span class="check material-icons">check</span></li >';
+  let html = aisorted
+    .map((item) => `<li class="model d-flex-jfsp mb-xxs mouse-h">
+                  <div class="model-content">${item}</div>
+                  <span class="check material-icons">check</span>
+                </li>`)
+    .join("");
+  filterAIMenu.innerHTML = str+html;
+  modelMenu()
+}
 
-// filter.addEventListener('click', (e) => {
-//   e.preventDefault();
-//   getCategories()
-//   console.log(e)
-//   // if (item.textContent === '全部') {
-//   //   data.type = '';
-//   // } else {
-//   //   data.type = item.textContent;
-//   // }
-//   // getData(data)
-// })
+function modelMenu(){
+  const model = document.querySelectorAll(".model");
+  model.forEach((item) =>item.addEventListener("click", function (e) {
+    const target = e.target
+    if (target.matches('.model-content')) {
+      if (!target.nextElementSibling.classList.contains("show")){
+        filterMenu.push(target.textContent)
+        filterbtnselect()
+      }else{
+        const index = filterMenu.findIndex((item) => item === target.textContent);
+        // console.log(index)
+        filterMenu.splice(index, 1)
+        filterbtnselect()
+      }
+      target.nextElementSibling.classList.toggle("show");
+      // console.log(target.textContent)
+    } else if (target.matches('.model')){
+      
+      if (!target.lastElementChild.classList.contains("show")) {
+        filterMenu.push(target.firstElementChild.textContent)
+        filterbtnselect()
+      } else {
+        const index = filterMenu.findIndex((item) => item === target.firstElementChild.textContent);
+        // console.log(index)
+        filterMenu.splice(index, 1)
+        filterbtnselect()
+      }
+      target.lastElementChild.classList.toggle("show");
+      // console.log(target.firstElementChild.textContent)
+    }
+    })
+  )
+}
+  
+function filterbtnselect(item){
+  console.log(filterMenu)
+  if (filterMenu.length === 0){
+    data.type = '';
+  }else{
+    for (let i = 0; i < filterMenu.length;i++){
+      data.type=filterMenu[i];
+      getData(data);
+      // console.log(data.type)
+    }
+    // console.log(data.type)
+  }
+
+}
+
+// 切換作品類型
+const searchlistbtn = document.querySelectorAll('.searchlistbtn')
+searchlistbtn.forEach((item) => {
+  item.addEventListener('click', () => {
+    if (item.textContent === '全部') {
+      data.type = '';
+    } else {
+      data.type = item.textContent;
+    }
+    getData(data)
+  })
+})
+
+//建立分頁meau
+function renderpaginator(amount) {
+  let rawhtml = "";
+  let str = '<li class="px-xs py-xs"><a href="#6">></a></li>';
+  for (let newpage = 1; newpage <= amount; newpage++) {
+    rawhtml += `<li class="px-xs py-xs mr-xs"><a href="#${newpage}" data-page="${newpage}">${newpage}</a></li>`
+  }
+  pagination.innerHTML = rawhtml + str;
+}
+
+//分頁點擊
+pagination.addEventListener('click', function onpaginatorClicked(e) {
+  if (e.target.tagName !== 'A') return
+  const page = Number(e.target.dataset.page)
+  data.page=page;
+  getData(data);
+})
 

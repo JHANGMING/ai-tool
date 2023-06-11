@@ -93,7 +93,7 @@
     <div class="partner">
       <h2 class="partner-title title-font-900 font-md color-w mt-lg mb-3xl">來自合作夥伴</h2>
       <div class="partner-list mb-5xl">
-        <ul class="partner-list-1 d-flex mb-sm">
+        <ul class="mask partner-list-1 d-flex mb-sm">
           <li><img class="img-style mr-lg" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/enterprise.png" alt="enterprise"></li>
           <li><img class="img-style mr-lg" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/enterprise1.png" alt="enterprise1"></li>
           <li><img class="img-style mr-lg" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/enterprise2.png" alt="enterprise2"></li>
@@ -102,8 +102,7 @@
           <li><img class="img-style mr-lg" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/enterprise5.png" alt="enterprise5"></li>
           <li><img class="img-style" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/enterprise6.png" alt="enterprise6"></li>
         </ul>
-        <ul class="partner-list-2 d-flex">
-          <li><img class="img-style mr-lg" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/enterprise7.png" alt="enterprise7"></li>
+        <ul class="mask partner-list-2 d-flex">
           <li><img class="img-style mr-lg" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/enterprise8.png" alt="enterprise8"></li>
           <li><img class="img-style mr-lg" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/enterprise9.png" alt="enterprise9"></li>
           <li><img class="img-style mr-lg" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/enterprise5.png" alt="enterprise5"></li>
@@ -192,10 +191,11 @@
             <div class="all-model">
               <ul class="filter-ai-model d-column">
                 <li class="all-model-title font-xxs fw-700 mb-xxs">AI模型</li>
-                <li class="model d-flex-jfsp mb-xxs mouse-h">所有模型<span class="check material-icons">
-                    check
-                  </span></li>
-                <li class="model d-flex-jfsp mb-xxs mouse-h">卡卡<span class="check material-icons">
+                <li class="model d-flex-jfsp mb-xxs mouse-h">
+                  <div class="model-content">所有模型</div>
+                  <span class="check material-icons">check</span>
+                </li>
+                <!-- <li class="model d-flex-jfsp mb-xxs mouse-h">卡卡<span class="check material-icons">
                     check
                   </span></li>
                 <li class="model d-flex-jfsp mb-xxs mouse-h">杰杰<span class="check material-icons">
@@ -206,42 +206,46 @@
                   </span></li>
                 <li class="model d-flex-jfsp pb-xs mouse-h">昊昊<span class="check material-icons">
                     check
-                  </span></li>
+                  </span></li> -->
               </ul>
               <ul class="filter-type-model d-column">
                 <li class="all-model-title font-xxs fw-700 mb-xxs pt-xs">類型</li>
-                <li class="model d-flex-jfsp mb-xxs mouse-h">所有類型<span class="check material-icons">
-                    check
-                  </span></li>
-                <li class="model d-flex-jfsp mb-xxs mouse-h">篩選項目1<span class="check material-icons">
-                    check
-                  </span></li>
-                <li class="model d-flex-jfsp mb-xxs mouse-h">篩選項目2<span class="check material-icons">
-                    check
-                  </span></li>
-                <li class="model d-flex-jfsp mb-xxs mouse-h">篩選項目3<span class="check material-icons">
-                    check
-                  </span></li>
-                <li class="model d-flex-jfsp mb-xxs mouse-h">篩選項目4<span class="check material-icons">
-                    check
-                  </span></li>
-                <li class="model d-flex-jfsp mb-xxs mouse-h">篩選項目5<span class="check material-icons">
-                    check
-                  </span></li>
-                <li class="model d-flex-jfsp mb-xxs mouse-h">篩選項目6<span class="check material-icons">
-                    check
-                  </span></li>
+                <li class="model d-flex-jfsp mb-xxs mouse-h">
+                  <div class="model-content">問答服務</div>
+                 <span class="check material-icons">check</span>
+                </li>
+                <li class="model d-flex-jfsp mb-xxs mouse-h">
+                  <div class="model-content">虛擬客服</div>
+                  <span class="check material-icons">check</span>
+                </li>
+                <li class="model d-flex-jfsp mb-xxs mouse-h">
+                  <div class="model-content">生活應用</div>
+                  <span class="check material-icons">check</span>
+                </li>
+                <li class="model d-flex-jfsp mb-xxs mouse-h">
+                  <div class="model-content">程式知識</div>
+                  <span class="check material-icons">check</span>
+                </li>
+                <li class="model d-flex-jfsp mb-xxs mouse-h">
+                  <div class="model-content">翻譯助手</div>
+                  <span class="check material-icons">check</span>
+                </li>
+                <li class="model d-flex-jfsp mb-xxs mouse-h">
+                  <div class="model-content">行銷文案</div>
+                  <span class="check material-icons">check</span>
+                </li>
+
               </ul>
             </div>
           </div>
           <ul class="tools-search-list d-flex">
-            <li class="one-black fw-700 br-sm"><a href="#全部">全部</a></li>
-            <li><a href="#問答服務">問答服務</a></li>
-            <li><a href="#虛擬客服">虛擬客服</a></li>
-            <li><a href="#生活應用">生活應用</a></li>
-            <li><a href="#程式知識">程式知識</a></li>
-            <li><a href="#翻譯助手">翻譯助手</a></li>
-            <li><a href="#行銷文案">行銷文案</a></li>
+            <li class="searchlistbtn one-black fw-700 br-sm"><a href="#全部">全部</a></li>
+            <li class="searchlistbtn"><a href="#問答服務">問答服務</a></li>
+            <li class="searchlistbtn"><a href="#虛擬客服">虛擬客服</a></li>
+            <li class="searchlistbtn"><a href="#生活應用">生活應用</a></li>
+            <li class="searchlistbtn"><a href="#程式知識">程式知識</a></li>
+            <li class="searchlistbtn"><a href="#翻譯助手">翻譯助手</a></li>
+            <li class="searchlistbtn"><a href="#行銷文案">行銷文案</a></li>
           </ul>
           <div class="tools-search-btn-dropdown">
             <button type="button" class="dropdown-btn btn btn-font mouse-h">

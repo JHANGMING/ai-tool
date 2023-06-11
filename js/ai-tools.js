@@ -48,9 +48,9 @@ $(".filter").click(function (e) {
 });
 
 /* check */
-$('.model').click(function (e) {
-  $(this).find(".check").toggleClass("show");
-});
+// $('.model').click(function (e) {
+//   $(this).find(".check").toggleClass("show");
+// });
 
 /*  切換按鈕文字  */
 $(".new-to-old").click(function (e) {
