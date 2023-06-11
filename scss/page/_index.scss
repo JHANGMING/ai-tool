@@ -92,17 +92,11 @@
   }
 
   &-list {
-    @include pad {
-      padding: 20px 20px;
-      width: 100%;
-    }
-
     @include mobile {
       width: 100%;
       margin-top: 40px;
-      padding: 20px 20px;
       flex-direction: column;
-      align-items: center;
+      justify-content: center;
     }
 
     li {
@@ -113,7 +107,8 @@
       }
 
       @include mobile {
-        width: 90%;
+        width: 100%;
+        padding: 40px 20px;
         margin-bottom: 12px;
       }
     }
@@ -136,6 +131,36 @@
     position: relative;
     max-width: 1320px;
     margin: 0 auto;
+    /* 固定遮罩位置 */
+      .mask::after,
+      .mask::before {
+        content: "";
+        position: sticky;
+        width: 196px;
+        height: 40px;
+        top: 0;
+      }
+    
+      .mask::before {
+        left: 0;
+        padding-right: 196px;
+        background: $background-linear;
+    
+        @include mobile {
+          padding-right: 83px;
+        }
+      }
+    
+      .mask::after {
+        right: 0;
+        padding-left: 196px;
+        background: $background-linear;
+        transform: rotate(-180deg);
+    
+        @include mobile {
+          padding-left: 83px;
+        }
+      }
   }
 
   &-list-1 {
@@ -150,6 +175,7 @@
       height: 40px;
       max-width: initial;
       }
+    
     @include pad {
       margin-bottom: 12px;
     }
